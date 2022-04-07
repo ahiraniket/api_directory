@@ -23,6 +23,8 @@
 <!-- endinject -->
 <link rel="shortcut icon" href="adminResources/image/favicon.png" />
 </head>
+<!-- tags -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 
 <body>
 	<div class="container-scroller">
@@ -45,17 +47,18 @@
 				<div class="content-wrapper">
 					<div class="card">
 						<div class="card-header"
-							style="background: linear-gradient(91deg, #7571f9, transparent);"\>
+							style="background: linear-gradient(91deg, #7571f9, transparent);">
 							<h3 class="m-0 text-white">View API</h3>
 						</div>
 						<div class="card-body">
 							<div class="row">
 								<div class="col-12">
 									<div class="table-responsive">
-										<table id="order-listing" class="table">
+
+										<table class="table">
 											<thead>
 												<tr>
-													<th>Domain Name</th>
+													<th>Category Name</th>
 													<th>API Name</th>
 													<th>API Type</th>
 													<th>API Endpoint</th>
@@ -66,20 +69,24 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>XYZ</td>
-													<td>XYZ</td>
-													<td>REST</td>
-													<td>https://github.com/Api-D/APID-web-app/tree/main/admin</td>
-													<td>This is a Cricket API</td>
-													<td>GET/POST</td>
-													<td>XML</td>
-													<td><a href=""> <i class="mdi mdi-pencil lead"></i>
-													</a><a href=""> <i
-															class="mdi mdi-delete lead text-danger ml-3"></i>
-													</a></td>
-												</tr>
-												<tr>
+												<c:forEach var="i" items="${viewApiList}">
+
+													<tr>
+														<td>${i.apiCategoryName}</td>
+														<td>${i.apiName}</td>
+														<td>${i.apiType}</td>
+														<td>${i.apiEndpoint}</td>
+														<td>${i.apiDescription}</td>
+														<td>${i.apiRequestMethodType}</td>
+														<td>${i.apiResponseType}</td>
+														<td><a href="editApi?apiId=${i.apiId}"> <i
+																class="mdi mdi-pencil lead"></i>
+														</a><a href="deleteApi?apiId=${i.apiId}"> <i
+																class="mdi mdi-delete lead text-danger ml-3"></i>
+														</a></td>
+													</tr>
+												</c:forEach>
+												<!-- <tr>
 													<td>XYZ</td>
 													<td>XYZ</td>
 													<td>SOAP</td>
@@ -91,7 +98,7 @@
 													</a><a href=""> <i
 															class="mdi mdi-delete lead text-danger ml-3"></i>
 													</a></td>
-												</tr>
+												</tr> -->
 											</tbody>
 										</table>
 									</div>

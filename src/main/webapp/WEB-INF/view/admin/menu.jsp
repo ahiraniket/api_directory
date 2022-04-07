@@ -26,11 +26,11 @@
 		</a>
 			<div class="collapse" id="editors">
 				<ul class="nav flex-column sub-menu">
-					<li class="nav-item"><a class="nav-link" href="./addapi.jsp">Add
+					<li class="nav-item"><a class="nav-link" href="addApi">Add
 							API</a></li>
 				</ul>
 				<ul class="nav flex-column sub-menu">
-					<li class="nav-item"><a class="nav-link" href="./viewApi.jsp">View
+					<li class="nav-item"><a class="nav-link" href="viewApi">View
 							API</a></li>
 				</ul>
 			</div></li>
