@@ -19,7 +19,6 @@ public class ManageApiServiceImpl implements ManageApiService {
 	@Override
 	public void insertApi(ManageApiVO manageApiVO) {
 		manageApiDAO.insertApi(manageApiVO);
-		
 	}
 
 	@Override

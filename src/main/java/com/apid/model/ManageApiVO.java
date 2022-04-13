@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,37 +15,38 @@ public class ManageApiVO{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="api_id")
-	int apiId;
+	private int apiId;
 	
-	@Column(name="api_category_name")
-	String apiCategoryName;
+	@ManyToOne
+	@JoinColumn(name="api_category_id")
+	private ManageApiCategoryVO manageCategoryVO;
 	
 	@Column(name="api_name")
-	String apiName;
+	private String apiName;
 	
 	@Column(name="api_type")
-	String apiType;
+	private String apiType;
 	
 	@Column(name="api_request_method_type")
-	String apiRequestMethodType;
+	private String apiRequestMethodType;
 	
 	@Column(name="api_response_type")
-	String apiResponseType;
+	private String apiResponseType;
 	
 	@Column(name="api_endpoint")
-	String apiEndpoint;
+	private String apiEndpoint;
 	
 	@Column(name="api_description")
-	String apiDescription;
+	private String apiDescription;
 	
 	@Column(name="api_sample_request")
-	String apiSampleRequest;
+	private String apiSampleRequest;
 	
 	@Column(name="api_sample_response")
-	String apiSampleResponse;
+	private String apiSampleResponse;
 	
 	@Column(name="api_status")
-	boolean apiStatus;
+	private boolean apiStatus;
 
 	public int getApiId() {
 		return apiId;
@@ -53,12 +56,12 @@ public class ManageApiVO{
 		this.apiId = apiId;
 	}
 
-	public String getApiCategoryName() {
-		return apiCategoryName;
+	public ManageApiCategoryVO getManageCategoryVO() {
+		return manageCategoryVO;
 	}
 
-	public void setApiCategoryName(String apiCategoryName) {
-		this.apiCategoryName = apiCategoryName;
+	public void setManageCategoryVO(ManageApiCategoryVO manageCategoryVO) {
+		this.manageCategoryVO = manageCategoryVO;
 	}
 
 	public String getApiName() {
