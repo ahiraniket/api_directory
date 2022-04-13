@@ -55,7 +55,7 @@
 								<div class="col-12">
 									<div class="table-responsive">
 
-										<table class="table">
+										<table id="order-listing" class="table">
 											<thead>
 												<tr>
 													<th>Category Name</th>
