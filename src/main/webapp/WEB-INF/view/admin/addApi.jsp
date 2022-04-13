@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Add API</title>
+<title>${formName}</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="adminResources/css/materialdesignicons.min.css">

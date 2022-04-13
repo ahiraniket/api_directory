@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Add Category</title>
+<title>${formName}</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="adminResources/css/materialdesignicons.min.css">
@@ -48,25 +49,27 @@
 							<div class="card">
 								<div class="card-header"
 									style="background: linear-gradient(91deg, #7571f9, transparent);"\>
-									<h3 class="m-0 text-white">Add Category</h3>
+									<h3 class="m-0 text-white">${formName}</h3>
 								</div>
 								<div class="card-body">
-									<form class="cmxform" id="commentForm" method="get" action="#">
+									<f:form class="cmxform" method="get"
+										action="insertCategory" modelAttribute="manageApiCategoryVO">
 										<fieldset>
+										<f:hidden path="apiCategoryId"/>
 											<div class="form-group">
-												<label for="cname">Category Name</label> <input id="cname"
-													class="form-control" name="name" minlength="2" type="text"
-													required>
+												<label for="apiCategoryName">Category Name</label>
+												<f:input id="apiCategoryName" class="form-control"
+													path="apiCategoryName" minlength="2" type="text" />
 											</div>
 
 											<div class="form-group">
 												<label for="ccomment">Category Description</label>
-												<textarea id="ccomment" class="form-control" name="comment"
-													required></textarea>
+												<f:textarea id="ccomment" class="form-control"
+													path="apiCategoryDescription" />
 											</div>
-											<input class="btn btn-primary" type="submit" value="Add">
+											<input class="btn btn-primary" type="submit" value="Submit">
 										</fieldset>
-									</form>
+									</f:form>
 								</div>
 							</div>
 						</div>

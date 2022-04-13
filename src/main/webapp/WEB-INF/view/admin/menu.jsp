@@ -13,9 +13,9 @@
 			<div class="collapse" id="ui-basic">
 				<ul class="nav flex-column sub-menu">
 					<li class="nav-item"><a class="nav-link"
-						href="addCategory.html">Add Category</a></li>
+						href="addCategory">Add Category</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="viewCategory.jsp">View Category</a></li>
+						href="viewCategory">View Category</a></li>
 				</ul>
 			</div></li>
 

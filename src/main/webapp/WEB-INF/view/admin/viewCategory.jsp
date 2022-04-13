@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,14 +63,20 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>Edinburgh</td>
-													<td>New York</td>
-													<td><a href=""> <i class="mdi mdi-pencil lead"></i>
-													</a> <a href=""> <i
-															class="mdi mdi-delete lead text-danger ml-3"></i>
-													</a></td>
-												</tr>
+												<c:forEach var="i" items="${viewApiCategoryList}">
+
+													<tr>
+														<td>${i.apiCategoryName}</td>
+														<td>${i.apiCategoryDescription}</td>
+														<td><a
+															href="editCategory?apiCategoryId=${i.apiCategoryId}">
+																<i class="mdi mdi-pencil lead"></i>
+														</a><a
+															href="deleteCategory?apiCategoryId=${i.apiCategoryId}">
+																<i class="mdi mdi-delete lead text-danger ml-3"></i>
+														</a></td>
+													</tr>
+												</c:forEach>
 											</tbody>
 										</table>
 									</div>
