@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,8 +60,13 @@
 									<f:hidden path="apiId"/>
 										<div class="row">
 											<div class="form-group col-4">
-												<label for="apiCategoryName">Category Name</label> 
-												<f:input id="apiCategoryName" class="form-control" path="apiCategoryName" minlength="2" type="text" />
+												<label for="apiCategoryId">Category Name</label> 
+												<f:select class="form-control" id="apiCategoryId" path="manageCategoryVO.apiCategoryId">
+													<option selected class="nav-item">Select Category</option>
+													<c:forEach var="i" items="${viewApiCategoryList}">
+														<f:option value="${i.apiCategoryId}" class="nav-item" >${i.apiCategoryName}</f:option>
+													</c:forEach>
+												</f:select>
 											</div>
 
 											<div class="form-group col-8">
@@ -119,11 +125,10 @@
 
 											<div class="form-group col-6">
 												<label for="apiSampleResponse">Sample Response</label>
-												<f:textarea id="apiSampleResponse" class="form-control" path="apiSampleResponse"
-													disabled="true"></f:textarea>
+												<f:textarea id="apiSampleResponse" class="form-control" path="apiSampleResponse"></f:textarea>
 											</div>
 										</div>
-										<input  type="submit" value="Save">
+										<input class="btn btn-primary" type="submit" value="Save">
 									</f:form>
 								</div>
 							</div>

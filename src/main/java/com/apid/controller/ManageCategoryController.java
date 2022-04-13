@@ -15,7 +15,7 @@ import com.apid.model.ManageApiCategoryVO;
 import com.apid.service.ManageApiCategoryService;
 
 @Controller
-public class CategoryController {
+public class ManageCategoryController {
 
 	@Autowired
 	ManageApiCategoryService manageApiCategoryService;

@@ -19,7 +19,6 @@ public class ManageApiDAOImpl implements ManageApiDAO{
 	public void insertApi(ManageApiVO manageApiVO) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.saveOrUpdate(manageApiVO);
-		
 	}
 
 	@Override
