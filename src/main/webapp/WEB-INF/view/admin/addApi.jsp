@@ -56,27 +56,30 @@
 									<h3 class="m-0 text-white">${formName}</h3>
 								</div>
 								<div class="card-body">
-									<f:form class="cmxform"  method="get" action="insertApi" modelAttribute="manageApiVO">
-									<f:hidden path="apiId"/>
+									<f:form class="cmxform" method="get" action="insertApi"
+										modelAttribute="manageApiVO">
+										<f:hidden path="apiId" />
 										<div class="row">
 											<div class="form-group col-4">
-												<label for="apiCategoryId">Category Name</label> 
-												<f:select class="form-control" id="apiCategoryId" path="manageCategoryVO.apiCategoryId">
+												<label for="categoryId">Category Name</label>
+												<f:select class="form-control" id="categoryId"
+													path="manageCategoryVO.categoryId">
 													<option selected class="nav-item">Select Category</option>
-													<c:forEach var="i" items="${viewApiCategoryList}">
-														<f:option value="${i.apiCategoryId}" class="nav-item" >${i.apiCategoryName}</f:option>
+													<c:forEach var="i" items="${viewCategoryList}">
+														<f:option value="${i.categoryId}" class="nav-item">${i.categoryName}</f:option>
 													</c:forEach>
 												</f:select>
 											</div>
 
 											<div class="form-group col-8">
-												<label for="apiName">API Name</label> 
-												<f:input id="apiName" class="form-control" path="apiName" minlength="2" type="text" />
+												<label for="apiName">API Name</label>
+												<f:input id="apiName" class="form-control" path="apiName"
+													minlength="2" type="text" />
 											</div>
 
 											<div class="form-group col-4">
-												<label for="apiType">API Type</label> 
-												<f:select	class="form-control " id="apiType"  path="apiType">
+												<label for="apiType">API Type</label>
+												<f:select class="form-control " id="apiType" path="apiType">
 													<option disabled class="nav-item">Select API Type</option>
 													<option class="nav-item">REST</option>
 													<option class="nav-item">SOAP</option>
@@ -85,9 +88,12 @@
 
 
 											<div class="form-group col-4">
-												<label for="apiRequestMethodType">Request Method Type</label> 
-												<f:select class="form-control " id="apiRequestMethodType"  path="apiRequestMethodType">
-													<option disabled class="nav-item">Select Request Method Type</option>
+												<label for="apiRequestMethodType">Request Method
+													Type</label>
+												<f:select class="form-control " id="apiRequestMethodType"
+													path="apiRequestMethodType">
+													<option disabled class="nav-item">Select Request
+														Method Type</option>
 													<option class="nav-item">GET</option>
 													<option class="nav-item">POST</option>
 													<option class="nav-item">PUT</option>
@@ -97,8 +103,9 @@
 											</div>
 
 											<div class="form-group col-4">
-												<label for="apiResponseType">Response Type</label> 
-												<f:select	class="form-control " id="apiResponseType"  path="apiResponseType">
+												<label for="apiResponseType">Response Type</label>
+												<f:select class="form-control " id="apiResponseType"
+													path="apiResponseType">
 													<option disabled class="nav-item">Select Response
 														Type</option>
 													<option class="nav-item">XML</option>
@@ -108,27 +115,30 @@
 
 
 											<div class="form-group col-12">
-												<label for="apiEndpoint">API Endpoint</label> <f:input
-													id="apiEndpoint" class="form-control"  path="apiEndpoint"
-													minlength="2" type="text" />
+												<label for="apiEndpoint">API Endpoint</label>
+												<f:input id="apiEndpoint" class="form-control"
+													path="apiEndpoint" minlength="2" type="text" />
 											</div>
 
 											<div class="form-group col-12">
 												<label for="apiDescription">API Description</label>
-												<f:textarea id="apiDescription" class="form-control"  path="apiDescription"></f:textarea>
+												<f:textarea id="apiDescription" class="form-control"
+													path="apiDescription"></f:textarea>
 											</div>
 
 											<div class="form-group col-6">
 												<label for="apiSampleRequest">Sample Request</label>
-												<f:textarea id="apiSampleRequest" class="form-control" path="apiSampleRequest"></f:textarea>
+												<f:textarea id="apiSampleRequest" class="form-control"
+													path="apiSampleRequest"></f:textarea>
 											</div>
 
 											<div class="form-group col-6">
 												<label for="apiSampleResponse">Sample Response</label>
-												<f:textarea id="apiSampleResponse" class="form-control" path="apiSampleResponse"></f:textarea>
+												<f:textarea id="apiSampleResponse" class="form-control"
+													path="apiSampleResponse"></f:textarea>
 											</div>
 										</div>
-										<input class="btn btn-primary" type="submit" value="Save">
+										<input class="btn btn-primary" type="submit" value="Submit">
 									</f:form>
 								</div>
 							</div>
