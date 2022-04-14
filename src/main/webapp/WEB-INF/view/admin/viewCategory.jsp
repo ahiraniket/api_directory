@@ -63,16 +63,15 @@
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="i" items="${viewApiCategoryList}">
+												<c:forEach var="i" items="${viewCategoryList}">
 
 													<tr>
-														<td>${i.apiCategoryName}</td>
-														<td>${i.apiCategoryDescription}</td>
+														<td>${i.categoryName}</td>
+														<td>${i.categoryDescription}</td>
 														<td><a
-															href="editCategory?apiCategoryId=${i.apiCategoryId}">
-																<i class="mdi mdi-pencil lead"></i>
-														</a><a
-															href="deleteCategory?apiCategoryId=${i.apiCategoryId}">
+															href="editCategory?categoryId=${i.categoryId}"> <i
+																class="mdi mdi-pencil lead"></i>
+														</a><a href="deleteCategory?categoryId=${i.categoryId}">
 																<i class="mdi mdi-delete lead text-danger ml-3"></i>
 														</a></td>
 													</tr>

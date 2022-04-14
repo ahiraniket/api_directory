@@ -19,7 +19,7 @@ public class ManageApiVO{
 	
 	@ManyToOne
 	@JoinColumn(name="api_category_id")
-	private ManageApiCategoryVO manageCategoryVO;
+	private ManageCategoryVO manageCategoryVO;
 	
 	@Column(name="api_name")
 	private String apiName;
@@ -56,11 +56,11 @@ public class ManageApiVO{
 		this.apiId = apiId;
 	}
 
-	public ManageApiCategoryVO getManageCategoryVO() {
+	public ManageCategoryVO getManageCategoryVO() {
 		return manageCategoryVO;
 	}
 
-	public void setManageCategoryVO(ManageApiCategoryVO manageCategoryVO) {
+	public void setManageCategoryVO(ManageCategoryVO manageCategoryVO) {
 		this.manageCategoryVO = manageCategoryVO;
 	}
 

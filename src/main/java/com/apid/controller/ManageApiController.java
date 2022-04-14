@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.apid.model.ManageApiVO;
-import com.apid.service.ManageApiCategoryService;
+import com.apid.service.ManageCategoryService;
 import com.apid.service.ManageApiService;
 
 @Controller
@@ -21,13 +21,13 @@ public class ManageApiController {
 	ManageApiService manageApiService;
 
 	@Autowired
-	ManageApiCategoryService manageApiCategoryService;
+	ManageCategoryService manageApiCategoryService;
 
 	@GetMapping(value = "addApi")
 	public ModelAndView addApi() {
-		List viewApiCategoryList = manageApiCategoryService.viewApiCategory();
+		List viewCategoryList = manageApiCategoryService.viewCategory();
 		return new ModelAndView("admin/addApi", "manageApiVO", new ManageApiVO()).addObject("formName", "Add a new API")
-				.addObject("viewApiCategoryList", viewApiCategoryList);
+				.addObject("viewCategoryList", viewCategoryList);
 	}
 
 	@GetMapping(value = "insertApi")
@@ -53,14 +53,14 @@ public class ManageApiController {
 	@GetMapping(value = "editApi")
 	public ModelAndView editApi(@RequestParam("apiId") int apiId) {
 		
-		List viewApiCategoryList = manageApiCategoryService.viewApiCategory();
+		List viewCategoryList = manageApiCategoryService.viewCategory();
 		
 		ManageApiVO manageApiVO = new ManageApiVO();
 		manageApiVO.setApiId(apiId);
 		List editApiList = manageApiService.editApi(manageApiVO);
 		manageApiVO = (ManageApiVO) editApiList.get(0);
 		return new ModelAndView("admin/addApi", "manageApiVO", manageApiVO).addObject("formName", "Edit Api")
-				.addObject("viewApiCategoryList", viewApiCategoryList);
+				.addObject("viewCategoryList", viewCategoryList);
 	}
 
 }
