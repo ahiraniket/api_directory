@@ -31,7 +31,7 @@
 				<div class="row w-100">
 					<div class="col-lg-4 mx-auto">
 						<div class="auth-form-light text-left p-5">
-							<div class="brand-logo">
+							<div class="brand-logo">	
 								<img src="<%=request.getContextPath()%>/adminResources/image/logo.svg" alt="logo">
 								
 							</div>

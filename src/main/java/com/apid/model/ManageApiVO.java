@@ -18,7 +18,7 @@ public class ManageApiVO{
 	private int apiId;
 	
 	@ManyToOne
-	@JoinColumn(name="api_category_id")
+	@JoinColumn(name="category_id")
 	private ManageCategoryVO manageCategoryVO;
 	
 	@Column(name="api_name")

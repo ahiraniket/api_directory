@@ -80,9 +80,9 @@
 														<td>${i.apiDescription}</td>
 														<td>${i.apiRequestMethodType}</td>
 														<td>${i.apiResponseType}</td>
-														<td><a href="editApi?apiId=${i.apiId}"> <i
+														<td><a href="admin/editApi?apiId=${i.apiId}"> <i
 																class="mdi mdi-pencil lead"></i>
-														</a><a href="deleteApi?apiId=${i.apiId}"> <i
+														</a><a href="admin/deleteApi?apiId=${i.apiId}"> <i
 																class="mdi mdi-delete lead text-danger ml-3"></i>
 														</a></td>
 													</tr>
