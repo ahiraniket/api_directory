@@ -20,41 +20,42 @@ public class LoginController {
 
 		return new ModelAndView("login");
 	}
- 	
+
 	@RequestMapping(value = "/admin/index", method = RequestMethod.GET)
 	public ModelAndView adminIndex() {
 
 		return new ModelAndView("admin/index");
 	}
-	
+
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
 	public ModelAndView userIndex() {
 
 		return new ModelAndView("user/index");
 	}
-	
-	@RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})	
-	public String viewUserDetails(ModelMap model,HttpServletResponse response,HttpServletRequest request) {
 
-		  Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	        if (auth != null) {
-	            new SecurityContextLogoutHandler().logout(request, response, auth);
-	            request.getSession().invalidate();
-	            request.getSession().setAttribute("tempStatus", "success");
-	            request.getSession().setAttribute("statusText", "Logout Successfully!");
+	@RequestMapping(value = "logout", method = { RequestMethod.POST, RequestMethod.GET })
+	public String viewUserDetails(ModelMap model, HttpServletResponse response, HttpServletRequest request) {
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			new SecurityContextLogoutHandler().logout(request, response, auth);
+			request.getSession().invalidate();
+			request.getSession().setAttribute("tempStatus", "success");
+			request.getSession().setAttribute("statusText", "Logout Successfully!");
+		}
+		return "login";
 	}
-	        return "login";
-	        }
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView load() {
 
 		return new ModelAndView("login");
 	}
-	
+
 	@RequestMapping(value = "/403", method = RequestMethod.GET)
 	public ModelAndView load403() {
 
 		return new ModelAndView("login");
 	}
-	
+
 }
