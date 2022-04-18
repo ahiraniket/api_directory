@@ -2,11 +2,14 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 	<div
 		class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+
 		<a class="navbar-brand brand-logo" href="./index.jsp"><img
 			src="<%=request.getContextPath()%>/adminResources/image/api-icon-full.png" alt="logo"
 			style="height: 40px; width: 40px" /></a> <a
 			class="navbar-brand brand-logo-mini" href="./index.jsp"><img
 			src="<%=request.getContextPath()%>/adminResources/image/api-icon-mini.png" alt="logo"
+
+
 			style="height: 40px; width: 40px" /></a>
 	</div>
 	<div

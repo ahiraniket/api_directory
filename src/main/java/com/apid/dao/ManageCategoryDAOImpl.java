@@ -8,43 +8,43 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.apid.model.ManageApiCategoryVO;
+import com.apid.model.ManageCategoryVO;
 
 @Repository
-public class ManageApiCategoryDAOImpl implements ManageApiCategoryDAO {
+public class ManageCategoryDAOImpl implements ManageCategoryDAO {
 
 	@Autowired
 	SessionFactory sessionFactory;
 
 	@Override
-	public void insertApiCategory(ManageApiCategoryVO manageApiCategoryVO) {
+	public void insertCategory(ManageCategoryVO manageCategoryVO) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.saveOrUpdate(manageApiCategoryVO);
+		session.saveOrUpdate(manageCategoryVO);
 
 	}
 
 	@Override
-	public List viewApiCategory() {
+	public List viewCategory() {
 		Session session = this.sessionFactory.openSession();
-		Query q = session.createQuery("from ManageApiCategoryVO");
-		List viewApiCategoryList = q.list();
-		return viewApiCategoryList;
+		Query q = session.createQuery("from ManageCategoryVO");
+		List viewCategoryList = q.list();
+		return viewCategoryList;
 	}
 
 	@Override
-	public List editApiCategory(ManageApiCategoryVO manageApiCategoryVO) {
+	public List editCategory(ManageCategoryVO manageCategoryVO) {
 		Session session = this.sessionFactory.openSession();
 		Query q = session.createQuery(
-				"from ManageApiCategoryVO where apiCategoryId='" + manageApiCategoryVO.getApiCategoryId() + "' ");
+				"from ManageCategoryVO where categoryId='" + manageCategoryVO.getCategoryId() + "' ");
 		List editApiCategoryList = q.list();
 		return editApiCategoryList;
 
 	}
 
 	@Override
-	public void deleteApiCategory(ManageApiCategoryVO manageApiCategoryVO) {
+	public void deleteCategory(ManageCategoryVO manageCategoryVO) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.delete(manageApiCategoryVO);
+		session.delete(manageCategoryVO);
 	}
 
 }

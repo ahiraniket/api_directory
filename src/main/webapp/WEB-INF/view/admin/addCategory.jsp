@@ -52,20 +52,20 @@
 									<h3 class="m-0 text-white">${formName}</h3>
 								</div>
 								<div class="card-body">
-									<f:form class="cmxform" method="get"
-										action="insertCategory" modelAttribute="manageApiCategoryVO">
+									<f:form class="cmxform" method="get" action="insertCategory"
+										modelAttribute="manageCategoryVO">
 										<fieldset>
-										<f:hidden path="apiCategoryId"/>
+											<f:hidden path="categoryId" />
 											<div class="form-group">
-												<label for="apiCategoryName">Category Name</label>
-												<f:input id="apiCategoryName" class="form-control"
-													path="apiCategoryName" minlength="2" type="text" />
+												<label for="categoryName">Category Name</label>
+												<f:input id="categoryName" class="form-control"
+													path="categoryName" minlength="2" type="text" />
 											</div>
 
 											<div class="form-group">
 												<label for="ccomment">Category Description</label>
 												<f:textarea id="ccomment" class="form-control"
-													path="apiCategoryDescription" />
+													path="categoryDescription" />
 											</div>
 											<input class="btn btn-primary" type="submit" value="Submit">
 										</fieldset>

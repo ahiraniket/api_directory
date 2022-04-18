@@ -73,7 +73,7 @@
 												<c:forEach var="i" items="${viewApiList}">
 
 													<tr>
-														<td>${i.manageCategoryVO.apiCategoryName}</td>
+														<td>${i.manageCategoryVO.categoryName}</td>
 														<td>${i.apiName}</td>
 														<td>${i.apiType}</td>
 														<td>${i.apiEndpoint}</td>
