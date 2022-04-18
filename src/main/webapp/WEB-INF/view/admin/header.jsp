@@ -3,10 +3,10 @@
 	<div
 		class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
 		<a class="navbar-brand brand-logo" href="./index.jsp"><img
-			src="adminResources/image/api-icon-full.png" alt="logo"
+			src="<%=request.getContextPath()%>/adminResources/image/api-icon-full.png" alt="logo"
 			style="height: 40px; width: 40px" /></a> <a
 			class="navbar-brand brand-logo-mini" href="./index.jsp"><img
-			src="adminResources/image/api-icon-mini.png" alt="logo"
+			src="<%=request.getContextPath()%>/adminResources/image/api-icon-mini.png" alt="logo"
 			style="height: 40px; width: 40px" /></a>
 	</div>
 	<div
@@ -19,7 +19,7 @@
 
 			<li class="nav-item nav-profile dropdown"><a
 				class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-				id="profileDropdown"> <img src="adminResources/image/face5.jpg"
+				id="profileDropdown"> <img src="<%=request.getContextPath()%>/adminResources/image/face5.jpg"
 					alt="profile" />
 			</a>
 				<div class="dropdown-menu dropdown-menu-right navbar-dropdown"

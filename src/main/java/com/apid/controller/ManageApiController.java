@@ -23,26 +23,26 @@ public class ManageApiController {
 	@Autowired
 	ManageApiCategoryService manageApiCategoryService;
 
-	@GetMapping(value = "addApi")
+	@GetMapping(value = "admin/addApi")
 	public ModelAndView addApi() {
 		List viewApiCategoryList = manageApiCategoryService.viewApiCategory();
 		return new ModelAndView("admin/addApi", "manageApiVO", new ManageApiVO()).addObject("formName", "Add a new API")
 				.addObject("viewApiCategoryList", viewApiCategoryList);
 	}
 
-	@GetMapping(value = "insertApi")
+	@GetMapping(value = "admin/insertApi")
 	public ModelAndView insertApi(@ModelAttribute ManageApiVO manageApiVO) {
 		manageApiService.insertApi(manageApiVO);
 		return new ModelAndView("redirect:addApi");
 	}
 
-	@GetMapping(value = "viewApi")
+	@GetMapping(value = "admin/viewApi")
 	public ModelAndView viewApi() {
 		List viewApiList = manageApiService.viewApi();
 		return new ModelAndView("admin/viewApi", "viewApiList", viewApiList);
 	}
 
-	@GetMapping(value = "deleteApi")
+	@GetMapping(value = "admin/deleteApi")
 	public ModelAndView deleteApi(@RequestParam("apiId") int apiId) {
 		ManageApiVO manageApiVO = new ManageApiVO();
 		manageApiVO.setApiId(apiId);
