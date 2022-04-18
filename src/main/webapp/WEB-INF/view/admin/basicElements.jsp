@@ -8,16 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Serein Admin</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="adminResources/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="adminResources/css/vendor.bundle.base.css">
-  <link rel="stylesheet" href="adminResources/css/vendor.bundle.addons.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="adminResources/css/style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="adminResources/image/favicon.png" />
+  <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
 <body>

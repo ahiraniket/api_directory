@@ -11,17 +11,17 @@
 <title>API-D</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
-	href="adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="adminResources/css/vendor.bundle.base.css">
+	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
-	href="adminResources/css/vendor.bundle.addons.css">
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="adminResources/css/style.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="adminResources/image/favicon.png"/>
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png"/>
 </head>
 <body>
 	<div class="container-scroller">
@@ -113,7 +113,7 @@
 									</div>
 									<div class="list d-flex align-items-center border-bottom pb-3">
 										<img class="img-sm rounded-circle"
-											src="adminResources/image/face8.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face8.jpg" alt="">
 										<div class="wrapper w-100 ml-3">
 											<p>
 												<b>Dobrick </b>published an article
@@ -123,7 +123,7 @@
 									</div>
 									<div class="list d-flex align-items-center border-bottom py-3">
 										<img class="img-sm rounded-circle"
-											src="adminResources/image/face5.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face5.jpg" alt="">
 										<div class="wrapper w-100 ml-3">
 											<p>
 												<b>Stella </b>created an event
@@ -133,7 +133,7 @@
 									</div>
 									<div class="list d-flex align-items-center border-bottom py-3">
 										<img class="img-sm rounded-circle"
-											src="adminResources/image/face7.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face7.jpg" alt="">
 										<div class="wrapper w-100 ml-3">
 											<p>
 												<b>Peter </b>submitted the reports
@@ -143,7 +143,7 @@
 									</div>
 									<div class="list d-flex align-items-center border-bottom py-3">
 										<img class="img-sm rounded-circle"
-											src="adminResources/image/face6.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face6.jpg" alt="">
 										<div class="wrapper w-100 ml-3">
 											<p>
 												<b>Nateila </b>updated the docs
@@ -153,7 +153,7 @@
 									</div>
 									<div class="list d-flex align-items-center pt-3">
 										<img class="img-sm rounded-circle"
-											src="adminResources/image/face9.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face9.jpg" alt="">
 										<div class="wrapper w-100 ml-3">
 											<p>
 												<b>Tom </b>uploaded the demo
@@ -212,7 +212,7 @@
 									<div
 										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
 										<img class="img-md rounded"
-											src="adminResources/image/face1.jpg" alt="" style="height:100px; margin-left:0">
+											src="<%=request.getContextPath()%>/adminResources/image/face1.jpg" alt="" style="height:100px; margin-left:0">
 										<div class="wrapper ml-4">
 											<p class="font-weight-medium">Aakash Bhalani</p>
 											<p class="text-muted">aakashbhalani0912@gmail.com</p>
@@ -228,7 +228,7 @@
 									<div
 										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
 										<img class="img-md rounded"
-											src="adminResources/image/face2.jpg" alt="" style="height:100px; margin-left:0">
+											src="<%=request.getContextPath()%>/adminResources/image/face2.jpg" alt="" style="height:100px; margin-left:0">
 										<div class="wrapper ml-4">
 											<p class="font-weight-medium">Aniket Ahir</p>
 											<p class="text-muted">ahiraniket@outlook.in</p>
@@ -244,7 +244,7 @@
 									<div
 										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
 										<img class="img-md rounded"
-											src="adminResources/image/face3.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face3.jpg" alt="">
 										<div class="wrapper ml-4">
 											<p class="font-weight-medium">Parth Patat</p>
 											<p class="text-muted">parthpatat1001@gmail.com</p>
@@ -270,20 +270,20 @@
 	<!-- container-scroller -->
 
 	<!-- plugins:js -->
-	<script src="adminResources/js/vendor.bundle.base.js"></script>
-	<script src="adminResources/js/vendor.bundle.addons.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- Plugin js for this page-->
 	<!-- End plugin js for this page-->
 	<!-- inject:js -->
-	<script src="adminResources/js/off-canvas.js"></script>
-	<script src="adminResources/js/hoverable-collapse.js"></script>
-	<script src="adminResources/js/template.js"></script>
-	<script src="adminResources/js/settings.js"></script>
-	<script src="adminResources/js/todolist.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="adminResources/js/dashboard.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/dashboard.js"></script>
 	<!-- End custom js for this page-->
 </body>
 

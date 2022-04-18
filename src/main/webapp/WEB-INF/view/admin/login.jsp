@@ -11,17 +11,17 @@
 <title>Serein Admin</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
-	href="adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="adminResources/css/vendor.bundle.base.css">
+	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
-	href="adminResources/css/vendor.bundle.addons.css">
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="adminResources/css/style.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="adminResources/image/favicon.png" />
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
 <body>
@@ -32,7 +32,7 @@
 					<div class="col-lg-4 mx-auto">
 						<div class="auth-form-light text-left p-5">
 							<div class="brand-logo">
-								<img src="adminResources/image/logo.svg" alt="logo">
+								<img src="<%=request.getContextPath()%>/adminResources/image/logo.svg" alt="logo">
 								
 							</div>
 							<h4>Hello! let's get started</h4>
@@ -90,15 +90,15 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<script src="adminResources/js/vendor.bundle.base.js"></script>
-	<script src="adminResources/js/vendor.bundle.addons.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="adminResources/js/off-canvas.js"></script>
-	<script src="adminResources/js/hoverable-collapse.js"></script>
-	<script src="adminResources/js/template.js"></script>
-	<script src="adminResources/js/settings.js"></script>
-	<script src="adminResources/js/todolist.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 </body>
 
