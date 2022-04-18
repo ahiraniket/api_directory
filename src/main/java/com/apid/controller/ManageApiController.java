@@ -50,7 +50,7 @@ public class ManageApiController {
 		return new ModelAndView("redirect:viewApi");
 	}
 
-	@GetMapping(value = "editApi")
+	@GetMapping(value = "admin/editApi")
 	public ModelAndView editApi(@RequestParam("apiId") int apiId) {
 		
 		List viewCategoryList = manageApiCategoryService.viewCategory();

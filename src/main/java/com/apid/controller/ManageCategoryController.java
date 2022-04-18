@@ -20,25 +20,25 @@ public class ManageCategoryController {
 	@Autowired
 	ManageCategoryService manageCategoryService;
 
-	@GetMapping(value = "addCategory")
+	@GetMapping(value = "admin/addCategory")
 	public ModelAndView addApi() {
 		return new ModelAndView("admin/addCategory", "manageCategoryVO", new ManageCategoryVO()).addObject("formName",
 				"Add new API Category");
 	}
 
-	@GetMapping(value = "insertCategory")
+	@GetMapping(value = "admin/insertCategory")
 	public ModelAndView insertCategory(@ModelAttribute ManageCategoryVO manageCategoryVO) {
 		manageCategoryService.insertCategory(manageCategoryVO);
 		return new ModelAndView("redirect:addCategory");
 	}
 
-	@GetMapping(value = "viewCategory")
+	@GetMapping(value = "admin/viewCategory")
 	public ModelAndView viewCategory() {
 		List viewCategoryList = manageCategoryService.viewCategory();
 		return new ModelAndView("admin/viewCategory", "viewCategoryList", viewCategoryList);
 	}
 
-	@GetMapping(value = "deleteCategory")
+	@GetMapping(value = "admin/deleteCategory")
 	public ModelAndView deleteCategory(@RequestParam("categoryId") int categoryId) {
 		ManageCategoryVO manageCategoryVO = new ManageCategoryVO();
 		manageCategoryVO.setCategoryId(categoryId);
@@ -46,7 +46,7 @@ public class ManageCategoryController {
 		return new ModelAndView("redirect:viewCategory");
 	}
 
-	@GetMapping(value = "editCategory")
+	@GetMapping(value = "admin/editCategory")
 	public ModelAndView editCategory(@RequestParam("categoryId") int categoryId) {
 		ManageCategoryVO manageCategoryVO = new ManageCategoryVO();
 		manageCategoryVO.setCategoryId(categoryId);
