@@ -44,7 +44,7 @@
 					Feedbacks</span>
 		</a></li>
 
-		<li class="nav-item"><a class="nav-link" href=""> <i
+		<li class="nav-item"><a class="nav-link" href="logout"> <i
 				class="mdi mdi-logout menu-icon"></i> <span class="menu-title">Logout</span>
 		</a></li>
 	</ul>
