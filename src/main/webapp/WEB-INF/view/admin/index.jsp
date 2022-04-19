@@ -215,7 +215,7 @@
 											src="<%=request.getContextPath()%>/adminResources/image/face1.jpg" alt="" style="height:100px; margin-left:0">
 										<div class="wrapper ml-4">
 											<p class="font-weight-medium">Aakash Bhalani</p>
-											<p class="text-muted">aakashbhalani0912@gmail.com</p>
+											<p class="text-muted">aakash@gmail.com</p>
 											<p class="text-info mb-0 font-weight-medium">Developer</p>
 										</div>
 									</div>
@@ -238,16 +238,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 grid-margin grid-margin-md-0">
 							<div class="card">
 								<div class="card-body">
 									<div
 										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
 										<img class="img-md rounded"
-											src="<%=request.getContextPath()%>/adminResources/image/face3.jpg" alt="">
+											src="<%=request.getContextPath()%>/adminResources/image/face3.jpg" alt="" style="height:100px; margin-left:0">
 										<div class="wrapper ml-4">
 											<p class="font-weight-medium">Parth Patat</p>
-											<p class="text-muted">parthpatat1001@gmail.com</p>
+											<p class="text-muted">parthp@gmail.com</p>
 											<p class="text-info mb-0 font-weight-medium">Developer</p>
 										</div>
 									</div>
