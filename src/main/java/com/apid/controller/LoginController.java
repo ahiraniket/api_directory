@@ -2,7 +2,8 @@ package com.apid.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.util.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -11,25 +12,30 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import com.apid.service.IndexService;
+
 
 @Controller
 public class LoginController {
 
+	@Autowired
+	IndexService indexService;
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView loadLogin() {
-
+		
 		return new ModelAndView("login");
 	}
 
 	@RequestMapping(value = "/admin/index", method = RequestMethod.GET)
 	public ModelAndView adminIndex() {
-
-		return new ModelAndView("admin/index");
+		List totalApiList=this.indexService.totalApiList();
+		return new ModelAndView("admin/index").addObject("totalApiList",totalApiList.get(0));
 	}
 
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
 	public ModelAndView userIndex() {
-
+		
 		return new ModelAndView("user/index");
 	}
 

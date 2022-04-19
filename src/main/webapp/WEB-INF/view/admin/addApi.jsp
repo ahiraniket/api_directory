@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>${formName}</title>
+<title>APID | Login</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
@@ -99,6 +99,7 @@
 													<option class="nav-item">PUT</option>
 													<option class="nav-item">DELETE</option>
 													<option class="nav-item">POST</option>
+													<option class="nav-item">PATCH</option>
 												</f:select>
 											</div>
 

@@ -48,7 +48,7 @@
 								class="card bg-gradient-primary text-white text-center card-shadow-primary">
 								<div class="card-body">
 									<h6 class="font-weight-normal">Total APIs</h6>
-									<h2 class="mb-0">28893</h2>
+									<h2 class="mb-0">${totalApiList}</h2>
 								</div>
 							</div>
 						</div>
@@ -146,7 +146,7 @@
 											src="<%=request.getContextPath()%>/adminResources/image/face6.jpg" alt="">
 										<div class="wrapper w-100 ml-3">
 											<p>
-												<b>Nateila </b>updated the docs
+												<b>Tom </b>updated the docs
 											</p>
 											<small class="text-muted">1 hours ago</small>
 										</div>

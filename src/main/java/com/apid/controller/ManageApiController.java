@@ -46,7 +46,13 @@ public class ManageApiController {
 	public ModelAndView deleteApi(@RequestParam("apiId") int apiId) {
 		ManageApiVO manageApiVO = new ManageApiVO();
 		manageApiVO.setApiId(apiId);
-		manageApiService.deleteApi(manageApiVO);
+		
+		List editApiList = manageApiService.editApi(manageApiVO);
+		manageApiVO = (ManageApiVO) editApiList.get(0);
+		
+		manageApiVO.setApiStatus(true);
+		
+		manageApiService.insertApi(manageApiVO);
 		return new ModelAndView("redirect:viewApi");
 	}
 
