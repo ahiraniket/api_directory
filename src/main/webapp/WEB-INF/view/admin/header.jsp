@@ -27,7 +27,7 @@
 			</a>
 				<div class="dropdown-menu dropdown-menu-right navbar-dropdown"
 					aria-labelledby="profileDropdown">
-					<a class="dropdown-item"> <i
+					<a class="dropdown-item" href="/logout"> <i
 						class="mdi mdi-logout text-primary"></i> Logout
 					</a>
 				</div></li>
