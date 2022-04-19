@@ -13,16 +13,19 @@
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
+<link rel="shortcut icon"
+	href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
 <body>
@@ -57,22 +60,23 @@
 										<table id="order-listing" class="table">
 											<thead>
 												<tr>
+													<th>No</th>
 													<th>Category Name</th>
 													<th>Category Description</th>
 													<th>Actions</th>
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="i" items="${viewCategoryList}">
+												<c:forEach var="i" items="${viewCategoryList}" varStatus="j">
 
 													<tr>
+														<td>${j.count}</td>
 														<td>${i.categoryName}</td>
 														<td>${i.categoryDescription}</td>
-														<td><a
-															href="editCategory?categoryId=${i.categoryId}"> <i
-																class="mdi mdi-pencil lead"></i>
-														</a><a href="deleteCategory?categoryId=${i.categoryId}">
-																<i class="mdi mdi-delete lead text-danger ml-3"></i>
+														<td><a href="editCategory?categoryId=${i.categoryId}">
+																<i class="mdi mdi-pencil lead"></i>
+														</a><a href="deleteCategory?categoryId=${i.categoryId}"> <i
+																class="mdi mdi-delete lead text-danger ml-3"></i>
 														</a></td>
 													</tr>
 												</c:forEach>
@@ -97,18 +101,26 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="<%=request.getContextPath()%>/adminResources/js/data-table.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/data-table.js"></script>
 	<!-- End custom js for this page-->
 </body>
 
