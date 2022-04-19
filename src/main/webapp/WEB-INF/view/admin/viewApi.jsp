@@ -9,20 +9,23 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Serein Admin</title>
+<title>APID | View API</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
+<link rel="shortcut icon"
+	href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 <!-- tags -->
 
@@ -71,21 +74,24 @@
 											</thead>
 											<tbody>
 												<c:forEach var="i" items="${viewApiList}">
+													
+													<c:if test="${i.apiStatus == false}">
+														<tr>
+															<td>${i.manageCategoryVO.categoryName}</td>
+															<td>${i.apiName}</td>
+															<td>${i.apiType}</td>
+															<td>${i.apiStatus}</td>
+															<td>${i.apiDescription}</td>
+															<td>${i.apiRequestMethodType}</td>
+															<td>${i.apiResponseType}</td>
+															<td><a href="editApi?apiId=${i.apiId}"> <i
+																	class="mdi mdi-pencil lead"></i>
+															</a><a href="deleteApi?apiId=${i.apiId}">
+																	<i class="mdi mdi-delete lead text-danger ml-3"></i>
+															</a></td>
 
-													<tr>
-														<td>${i.manageCategoryVO.categoryName}</td>
-														<td>${i.apiName}</td>
-														<td>${i.apiType}</td>
-														<td>${i.apiEndpoint}</td>
-														<td>${i.apiDescription}</td>
-														<td>${i.apiRequestMethodType}</td>
-														<td>${i.apiResponseType}</td>
-														<td><a href="admin/editApi?apiId=${i.apiId}"> <i
-																class="mdi mdi-pencil lead"></i>
-														</a><a href="admin/deleteApi?apiId=${i.apiId}"> <i
-																class="mdi mdi-delete lead text-danger ml-3"></i>
-														</a></td>
-													</tr>
+														</tr>
+													</c:if>
 												</c:forEach>
 												<!-- <tr>
 													<td>XYZ</td>
@@ -121,18 +127,26 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="<%=request.getContextPath()%>/adminResources/js/data-table.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/data-table.js"></script>
 	<!-- End custom js for this page-->
 </body>
 
