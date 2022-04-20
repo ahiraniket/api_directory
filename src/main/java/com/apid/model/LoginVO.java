@@ -32,7 +32,7 @@ public class LoginVO {
 		return role;
 	}
 
-	public String getEnabled() {
+	public boolean getEnabled() {
 		return enabled;
 	}
 
@@ -52,7 +52,7 @@ public class LoginVO {
 		this.role = role;
 	}
 
-	public void setEnabled(String enabled) {
+	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
 
@@ -66,5 +66,5 @@ public class LoginVO {
 	private String role;
 
 	@Column(name="enabled")
-	private String enabled;
+	private boolean enabled;
 }
