@@ -60,7 +60,7 @@
 										<table id="order-listing" class="table">
 											<thead>
 												<tr>
-													<th>No</th>
+													<th>Sr No</th>
 													<th>Category Name</th>
 													<th>Category Description</th>
 													<th>Actions</th>
