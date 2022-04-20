@@ -39,7 +39,7 @@
 			class="nav-link"> <i class="mdi mdi-headset menu-icon"></i> <span
 				class="menu-title">Manage Complaints</span>
 		</a></li>
-		<li class="nav-item"><a class="nav-link" href="viewFeedback.jsp">
+		<li class="nav-item"><a class="nav-link" href="viewFeedbacks">
 				<i class="mdi mdi-thumb-up menu-icon"></i> <span class="menu-title">Manage
 					Feedbacks</span>
 		</a></li>
