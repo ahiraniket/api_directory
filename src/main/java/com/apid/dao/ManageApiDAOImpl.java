@@ -24,7 +24,7 @@ public class ManageApiDAOImpl implements ManageApiDAO{
 	@Override
 	public List viewApi() {
 		Session session = this.sessionFactory.openSession();
-		Query q= session.createQuery("from ManageApiVO");
+		Query q= session.createQuery("from ManageApiVO WHERE api_status=true");
 		List viewApiList=q.list();
 		return viewApiList;
 	}

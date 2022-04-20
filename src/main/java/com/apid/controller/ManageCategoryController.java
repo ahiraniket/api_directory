@@ -42,7 +42,14 @@ public class ManageCategoryController {
 	public ModelAndView deleteCategory(@RequestParam("categoryId") int categoryId) {
 		ManageCategoryVO manageCategoryVO = new ManageCategoryVO();
 		manageCategoryVO.setCategoryId(categoryId);
-		manageCategoryService.deleteCategory(manageCategoryVO);
+
+		List editCategoryList = manageCategoryService.editCategory(manageCategoryVO);
+		manageCategoryVO = (ManageCategoryVO) editCategoryList.get(0);
+
+		manageCategoryVO.setCategoryStatus(true);
+
+		manageCategoryService.insertCategory(manageCategoryVO);
+
 		return new ModelAndView("redirect:viewCategory");
 	}
 

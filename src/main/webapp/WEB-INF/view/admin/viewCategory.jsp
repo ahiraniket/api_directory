@@ -68,17 +68,19 @@
 											</thead>
 											<tbody>
 												<c:forEach var="i" items="${viewCategoryList}" varStatus="j">
-
-													<tr>
-														<td>${j.count}</td>
-														<td>${i.categoryName}</td>
-														<td>${i.categoryDescription}</td>
-														<td><a href="editCategory?categoryId=${i.categoryId}">
-																<i class="mdi mdi-pencil lead"></i>
-														</a><a href="deleteCategory?categoryId=${i.categoryId}"> <i
-																class="mdi mdi-delete lead text-danger ml-3"></i>
-														</a></td>
-													</tr>
+													<c:if test="${i.categoryStatus == true}">
+														<tr>
+															<td>${j.count}</td>
+															<td>${i.categoryName}</td>
+															<td>${i.categoryDescription}</td>
+															<td><a
+																href="editCategory?categoryId=${i.categoryId}"> <i
+																	class="mdi mdi-pencil lead"></i>
+															</a><a href="deleteCategory?categoryId=${i.categoryId}">
+																	<i class="mdi mdi-delete lead text-danger ml-3"></i>
+															</a></td>
+														</tr>
+													</c:if>
 												</c:forEach>
 											</tbody>
 										</table>

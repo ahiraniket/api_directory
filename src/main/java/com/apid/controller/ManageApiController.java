@@ -50,7 +50,7 @@ public class ManageApiController {
 		List editApiList = manageApiService.editApi(manageApiVO);
 		manageApiVO = (ManageApiVO) editApiList.get(0);
 		
-		manageApiVO.setApiStatus(true);
+		manageApiVO.setApiStatus(false);
 		
 		manageApiService.insertApi(manageApiVO);
 		return new ModelAndView("redirect:viewApi");

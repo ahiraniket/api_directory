@@ -16,15 +16,17 @@ public class IndexDAOImpl implements IndexDAO {
 	public List totalApiList() {
 		
 		Session session = this.sessionFactory.openSession();
-		Query q= session.createQuery("SELECT COUNT(*) FROM ManageApiVO WHERE api_status=false");
+		Query q= session.createQuery("SELECT COUNT(*) FROM ManageApiVO WHERE api_status=true");
 		List totalApiList=q.list();
 		return totalApiList;
 	}
 
 	@Override
 	public List totalCategories() {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = this.sessionFactory.openSession();
+		Query q= session.createQuery("SELECT COUNT(*) FROM ManageCategoryVO WHERE category_status=true");
+		List totalCategoryList=q.list();
+		return totalCategoryList;
 	}
 
 	@Override

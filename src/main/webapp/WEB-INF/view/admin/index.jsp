@@ -57,7 +57,7 @@
 								class="card bg-gradient-danger text-white text-center card-shadow-danger">
 								<div class="card-body">
 									<h6 class="font-weight-normal">Total Categories</h6>
-									<h2 class="mb-0">28893</h2>
+									<h2 class="mb-0">${totalCategoryList}</h2>
 								</div>
 							</div>
 						</div>

@@ -19,6 +19,7 @@ public class ManageCategoryServiceImpl implements ManageCategoryService {
 
 	@Override
 	public void insertCategory(ManageCategoryVO manageCategoryVO) {
+		manageCategoryVO.setCategoryStatus(true);
 		manageCategoryDAO.insertCategory(manageCategoryVO);
 
 	}
