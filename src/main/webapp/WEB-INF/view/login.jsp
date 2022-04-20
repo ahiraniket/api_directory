@@ -41,11 +41,10 @@
 									alt="logo"
 									style="margin-bottom: 0.5rem; width: 70px; height: 70px" /></a>
 							</div>
-<<<<<<< Updated upstream
-							<h4>Sign in to continue</h4>
-=======
-							<h3>Login</h3>
->>>>>>> Stashed changes
+
+							<h3 class="text-primary">Login</h3>
+
+
 							<form class="pt-3" method="post" action="j_spring_security_check">
 								<div class="form-group">
 									<input type="email" class="form-control form-control-lg"
@@ -64,14 +63,11 @@
 								<div class="my-2 d-flex justify-content-between align-items-end"
 									style="margin-top: 0.5rem; display: flex;flex-direction: row-reverse;">
 
-<<<<<<< Updated upstream
-									<a href="#" class="auth-link text-gray">Forgot password?</a>
-=======
 									<a href="#" class="auth-link text-danger">Forgot password?</a>
->>>>>>> Stashed changes
+
 								</div>
 								<div class="text-center mt-4 font-weight-light">
-									Don't have an account? <a href="./register.jsp"
+									Don't have an account? <a href="register"
 										class="text-primary">Create</a>
 								</div>
 							</form>

@@ -1,15 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: api_directory
 Implementation-Version: 0.0.1-SNAPSHOT
-<<<<<<< Updated upstream
-Built-By: Nidhi Patat
-Implementation-Vendor-Id: com.apid
-Build-Jdk: 1.8.0_152
-=======
 Built-By: Aniket
 Implementation-Vendor-Id: com.apid
 Build-Jdk: 1.8.0_321
->>>>>>> Stashed changes
 Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
