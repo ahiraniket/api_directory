@@ -62,6 +62,7 @@
 										<table id="order-listing" class="table">
 											<thead>
 												<tr>
+													<th>Sr No</th>
 													<th>Category Name</th>
 													<th>API Name</th>
 													<th>API Type</th>
@@ -73,10 +74,11 @@
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="i" items="${viewApiList}">
+												<c:forEach var="i" items="${viewApiList}" varStatus="j">
 													
 													<c:if test="${i.apiStatus == true}">
 														<tr>
+															<td>${j.count}</td>
 															<td>${i.manageCategoryVO.categoryName}</td>
 															<td>${i.apiName}</td>
 															<td>${i.apiType}</td>
