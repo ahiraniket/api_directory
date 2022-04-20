@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 D:\projectworkspace\api_directory\src\main\java\com\apid\dao\ManageCategoryDAO.java
 D:\projectworkspace\api_directory\src\main\java\com\apid\dao\ManageComplaintsDAO.java
 D:\projectworkspace\api_directory\src\main\java\com\apid\dao\IndexDAOImpl.java
@@ -27,3 +28,35 @@ D:\projectworkspace\api_directory\src\main\java\com\apid\dao\ManageApiDAO.java
 D:\projectworkspace\api_directory\src\main\java\com\apid\configuration\CustomizeAuthenticationSuccessHandler.java
 D:\projectworkspace\api_directory\src\main\java\com\apid\service\IndexServiceImpl.java
 D:\projectworkspace\api_directory\src\main\java\com\apid\dao\ManageComplaintsDAOImpl.java
+=======
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageFeedbacksService.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageComplaintsDAOImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\configuration\SecurityConfiguration.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\controller\ManageCategoryController.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\model\ManageFeedbacksVO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageCategoryService.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\controller\ManageApiController.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\model\ManageComplaintsVO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageFeedbacksServiceImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageApiDAO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageCategoryServiceImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\Application.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageFeedbacksDAOImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageComplaintsServiceImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageApiDAOImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\model\LoginVO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\HibernateConfiguration.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\model\ManageCategoryVO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\controller\LoginController.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageCategoryDAOImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageComplaintsService.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageApiServiceImpl.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageComplaintsDAO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\service\ManageApiService.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageCategoryDAO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\dao\ManageFeedbacksDAO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\model\ManageApiVO.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\configuration\CustomizeAuthenticationSuccessHandler.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\controller\ManageFeedbacksController.java
+D:\projectworkspacce\api_directory\api_directory\src\main\java\com\apid\controller\ManageComplaintsController.java
+>>>>>>> Stashed changes

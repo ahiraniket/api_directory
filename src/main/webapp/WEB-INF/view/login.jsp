@@ -39,8 +39,7 @@
 									src="<%=request.getContextPath()%>/adminResources/image/api-icon-full.png"
 									alt="logo" style="height: 40px; width: 40px" /></a>
 							</div>
-							<h4>Hello! let's get started</h4>
-							<h6 class="font-weight-light">Sign in to continue.</h6>
+							<h4>Sign in to continue</h4>
 							<form class="pt-3" method="post" action="j_spring_security_check">
 								<div class="form-group">
 									<input type="email" class="form-control form-control-lg"
@@ -59,7 +58,7 @@
 								<div
 									class="my-2 d-flex justify-content-between align-items-center">
 
-									<a href="#" class="auth-link text-black">Forgot password?</a>
+									<a href="#" class="auth-link text-gray">Forgot password?</a>
 								</div>
 								<div class="text-center mt-4 font-weight-light">
 									Don't have an account? <a href="./register.jsp"

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,14 +59,27 @@
 											<thead>
 												<tr>
 													<th>User</th>
-													<th>Rating</th>
 													<th>Description</th>
+													<th>Rating</th>
 													<th>Actions</th>
 												</tr>
 											</thead>
 											<tbody>
+												<c:forEach var="i" items="${viewFeedbacksList}">
+
+													<tr>										
+														<td>${i.feedbackUser}</td>
+														<td>${i.feedbackDescription}</td>
+														<td>${i.feedbackRating}</td>
+														<td><a href="admin/deleteFeedback?feedbackId=${i.feedbackId}"> <i
+																class="mdi mdi-delete lead text-danger ml-3"></i>
+														</a></td>
+													</tr>
+												</c:forEach>
+											</tbody>
+											<!-- <tbody>
 												<tr>
-													<td>ahiraniket@outlook.in</td>
+													<td>parthpatat@gmail.com</td>
 													<td><i class="mdi mdi-star lead"></i> <i
 														class="mdi mdi-star lead"></i> <i
 														class="mdi mdi-star lead"></i> <i
@@ -75,7 +90,7 @@
 															class="mdi mdi-delete lead text-danger ml-3"></i>
 													</a></td>
 												</tr>
-											</tbody>
+											</tbody> -->
 										</table>
 									</div>
 								</div>
