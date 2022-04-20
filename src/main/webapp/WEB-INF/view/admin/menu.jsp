@@ -35,7 +35,7 @@
 				</ul>
 			</div></li>
 
-		<li class="nav-item"><a href="viewComplaints.jsp"
+		<li class="nav-item"><a href="viewComplaints"
 			class="nav-link"> <i class="mdi mdi-headset menu-icon"></i> <span
 				class="menu-title">Manage Complaints</span>
 		</a></li>

@@ -26,17 +26,15 @@ public class ManageComplaintsDAOImpl implements ManageComplaintsDAO{
 	}
 
 	@Override
-	public List editComplaints(ManageComplaintsVO manageComplaintsVO) {
-		/*Session session = this.sessionFactory.openSession();
-		Query q= session.createQuery("from ManageComplaintsVO where manageComplaintsId='"++"' ");
-		List editComplaintsList=q.list();*/
-		return null;
-	}
-
-	@Override
 	public void deleteComplaints(ManageComplaintsVO manageComplaintsVO) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.delete(manageComplaintsVO);
+	}
+
+	@Override
+	public List editComplaints(ManageComplaintsVO manageComplaintsVO) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
