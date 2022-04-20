@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,16 +13,19 @@
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
+<link rel="shortcut icon"
+	href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
 <body>
@@ -49,7 +53,7 @@
 							<h3 class="m-0 text-white">Manage Complaints</h3>
 						</div>
 						<div class="card-body">
-							
+
 							<br>
 							<div class="row">
 								<div class="col-12">
@@ -57,17 +61,39 @@
 										<table id="order-listing" class="table">
 											<thead>
 												<tr>
+													<th>No</th>
 													<th>User</th>
-													<th>Date</th>
 													<th>Subject</th>
 													<th>Description</th>
 													<th>Attachments</th>
 													<th>Reply</th>
-													<th>Status</th>
 													<th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
+												<c:forEach var="i" items="${viewComplaintsList}" varStatus="j">
+													<tr>
+														<td>${j.count}</td>
+														<td>${i.complaintUser}</td>
+														<td>${i.complaintSubject}</td>
+														<td>${i.complaintDescription}</td>
+														<td>Attachments</td>
+														<td>${i.complaintReply}</td>
+														<td>
+															<c:if test="${i.complaintStatus == false}">
+																<a href="addComplaintReply?complaintId=${i.complaintId}"> <label class="btn btn-outline-success">Reply</label></a>
+															</c:if>
+															<c:if test="${i.complaintStatus == true}">
+																<button type=button class="btn btn-success" disabled>Replied</button></a>
+															</c:if>
+															<a href="deleteComplaint?complaintId=${i.complaintId}"> 
+																<i class="mdi mdi-delete lead text-danger ml-3"></i>
+															</a>
+														</td>
+													</tr>
+												</c:forEach>
+											</tbody>
+											<!-- <tbody>
 												<tr>
 													<td>parth123</td>
 													<td>2012/08/03</td>
@@ -84,24 +110,7 @@
 															class="mdi mdi-delete lead text-danger ml-3"></i>
 													</a></td>
 												</tr>
-												<tr>
-													<td>patat123</td>
-													<td>2012/08/03</td>
-													<td>Subject 2</td>
-													<td>It wanted to be remembered long after all the
-														other droplets had dissolved into history. So it waited
-														for the perfect specimen to fly by to trap and capture
-														that it hoped would eventually be discovered hundreds of
-														years in the future.</td>
-													<td>Attachment 2</td>
-													<td></td>
-													<td><a href="addComplainReply.jsp" type="button"
-														class="btn btn-inverse-danger btn-fw">Reply</a></td>
-													<td><a href=""> <i
-															class="mdi mdi-delete lead text-danger ml-3"></i>
-													</a></td>
-												</tr>
-											</tbody>
+											</tbody> -->
 										</table>
 									</div>
 								</div>
@@ -122,18 +131,26 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="<%=request.getContextPath()%>/adminResources/js/data-table.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/data-table.js"></script>
 	<!-- End custom js for this page-->
 </body>
 

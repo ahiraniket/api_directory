@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +11,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>APID | Complain Reply</title>
+<title>APID | Complaint Reply</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
@@ -48,32 +51,40 @@
 							<div class="card">
 								<div class="card-header"
 									style="background: linear-gradient(91deg, #7571f9, transparent);"\>
-									<h3 class="m-0 text-white">Complaint Reply</h3>
+									<h3 class="m-0 text-white">${formName}</h3>
 								</div>
 								<div class="card-body">
-
-									<form class="cmxform" id="commentForm" method="get" action="#">
-										<fieldset>
-											<div class="form-group">
-												<label for="cname">Subject</label> <input id="cname"
-													class="form-control" name="name" minlength="2" type="text"
-													readonly>
-											</div>
-
-											<div class="form-group">
-												<label for="ccomment">Description</label>
-												<textarea id="ccomment" class="form-control" name="comment"
-													readonly></textarea>
-											</div>
-
-											<div class="form-group">
-												<label for="ccomment">Reply</label>
-												<textarea id="ccomment" class="form-control" name="comment"
-													required></textarea>
-											</div>
+									<f:form class="cmxform" method="get" action="insertComplaint" modelAttribute="manageComplaintsVO">
+										<div class="row">
+											
+											<c:forEach var="i" items="${viewComplaintsList}">
+												<div class="form-group">
+													<label>User</label> 
+													<f:input class="form-control" type="text" path="${i.complaintUser}" readonly />
+												</div>
+												
+												<div class="form-group">
+													<label>Subject</label> 
+													<f:input class="form-control" type="text" path="${i.complaintSubject}" readonly />
+												</div>
+	
+												<div class="form-group">
+													<label>Description</label> 
+													<f:textarea class="form-control" type="text" path="${i.complaintDescription}" readonly />
+												</div>
+	
+												<div class="form-group">
+													<label>Attachments</label> 
+												</div>
+												
+												<div class="form-group">
+													<label>Reply</label>
+													<f:textarea class="form-control" type="text" path="${i.complaintReply }" required />
+												</div>
+											</c:forEach>
 											<input class="btn btn-primary" type="submit" value="Reply">
-										</fieldset>
-									</form>
+										<f:hidden path="complaintId" />
+									</f:form>
 								</div>
 							</div>
 						</div>

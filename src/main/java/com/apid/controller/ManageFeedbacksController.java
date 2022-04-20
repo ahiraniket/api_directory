@@ -25,7 +25,7 @@ public class ManageFeedbacksController {
 		return new ModelAndView("admin/viewFeedbacks", "viewFeedbacksList", viewFeedbacksList);
 	}
 	
-	@GetMapping(value = "admin/deleteFeedbacks")
+	@GetMapping(value = "admin/deleteFeedback")
 	public ModelAndView deleteFeedbacks(@RequestParam("feedbackId") int feedbackId) {
 		ManageFeedbacksVO manageFeedbacksVO = new ManageFeedbacksVO();
 		manageFeedbacksVO.setFeedbackId(feedbackId);

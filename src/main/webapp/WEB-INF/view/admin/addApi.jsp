@@ -56,8 +56,7 @@
 									<h3 class="m-0 text-white">${formName}</h3>
 								</div>
 								<div class="card-body">
-									<f:form class="cmxform" method="get" action="insertApi"
-										modelAttribute="manageApiVO">
+									<f:form class="cmxform" method="get" action="insertApi" modelAttribute="manageApiVO">
 										<f:hidden path="apiId" />
 										<div class="row">
 											<div class="form-group col-4">

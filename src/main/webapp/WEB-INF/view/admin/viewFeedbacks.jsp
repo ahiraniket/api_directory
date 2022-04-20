@@ -58,20 +58,22 @@
 										<table id="order-listing" class="table">
 											<thead>
 												<tr>
+													<th>No</th>
 													<th>User</th>
-													<th>Description</th>
+													<th class="col-6">Description</th>
 													<th>Rating</th>
 													<th>Actions</th>
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="i" items="${viewFeedbacksList}">
+												<c:forEach var="i" items="${viewFeedbacksList}" varStatus="j">
 
-													<tr>										
+													<tr>
+														<td>${j.count}</td>										
 														<td>${i.feedbackUser}</td>
-														<td>${i.feedbackDescription}</td>
+														<td class="col-6">${i.feedbackDescription}</td>
 														<td>${i.feedbackRating}</td>
-														<td><a href="admin/deleteFeedback?feedbackId=${i.feedbackId}"> <i
+														<td><a href="deleteFeedback?feedbackId=${i.feedbackId}"> <i
 																class="mdi mdi-delete lead text-danger ml-3"></i>
 														</a></td>
 													</tr>
