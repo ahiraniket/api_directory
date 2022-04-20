@@ -28,6 +28,7 @@ public class ManageCategoryController {
 
 	@GetMapping(value = "admin/insertCategory")
 	public ModelAndView insertCategory(@ModelAttribute ManageCategoryVO manageCategoryVO) {
+		manageCategoryVO.setCategoryStatus(true);
 		manageCategoryService.insertCategory(manageCategoryVO);
 		return new ModelAndView("redirect:addCategory");
 	}
@@ -46,8 +47,8 @@ public class ManageCategoryController {
 		List editCategoryList = manageCategoryService.editCategory(manageCategoryVO);
 		manageCategoryVO = (ManageCategoryVO) editCategoryList.get(0);
 
-		manageCategoryVO.setCategoryStatus(true);
-
+		manageCategoryVO.setCategoryStatus(false);
+		
 		manageCategoryService.insertCategory(manageCategoryVO);
 
 		return new ModelAndView("redirect:viewCategory");
