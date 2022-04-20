@@ -26,7 +26,7 @@ public class ManageCategoryDAOImpl implements ManageCategoryDAO {
 	@Override
 	public List viewCategory() {
 		Session session = this.sessionFactory.openSession();
-		Query q = session.createQuery("from ManageCategoryVO");
+		Query q = session.createQuery("from ManageCategoryVO WHERE category_status=true");
 		List viewCategoryList = q.list();
 		return viewCategoryList;
 	}
@@ -34,8 +34,8 @@ public class ManageCategoryDAOImpl implements ManageCategoryDAO {
 	@Override
 	public List editCategory(ManageCategoryVO manageCategoryVO) {
 		Session session = this.sessionFactory.openSession();
-		Query q = session.createQuery(
-				"from ManageCategoryVO where categoryId='" + manageCategoryVO.getCategoryId() + "' ");
+		Query q = session
+				.createQuery("from ManageCategoryVO where categoryId='" + manageCategoryVO.getCategoryId() + "' ");
 		List editApiCategoryList = q.list();
 		return editApiCategoryList;
 

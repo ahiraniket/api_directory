@@ -75,12 +75,12 @@
 											<tbody>
 												<c:forEach var="i" items="${viewApiList}">
 													
-													<c:if test="${i.apiStatus == false}">
+													<c:if test="${i.apiStatus == true}">
 														<tr>
 															<td>${i.manageCategoryVO.categoryName}</td>
 															<td>${i.apiName}</td>
 															<td>${i.apiType}</td>
-															<td>${i.apiStatus}</td>
+															<td>${i.apiEndpoint}</td>
 															<td>${i.apiDescription}</td>
 															<td>${i.apiRequestMethodType}</td>
 															<td>${i.apiResponseType}</td>

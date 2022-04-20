@@ -30,7 +30,8 @@ public class LoginController {
 	@RequestMapping(value = "/admin/index", method = RequestMethod.GET)
 	public ModelAndView adminIndex() {
 		List totalApiList=this.indexService.totalApiList();
-		return new ModelAndView("admin/index").addObject("totalApiList",totalApiList.get(0));
+		List totalCategoryList=this.indexService.totalCategoryList();
+		return new ModelAndView("admin/index").addObject("totalApiList",totalApiList.get(0)).addObject("totalCategoryList",totalCategoryList.get(0));
 	}
 
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)

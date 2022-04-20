@@ -22,6 +22,17 @@ public class ManageCategoryVO {
 	@Column(name = "category_description")
 	private String categoryDescription;
 
+	@Column(name = "category_status")
+	private boolean categoryStatus;
+
+	public boolean getCategoryStatus() {
+		return categoryStatus;
+	}
+
+	public void setCategoryStatus(boolean categoryStatus) {
+		this.categoryStatus = categoryStatus;
+	}
+
 	public int getCategoryId() {
 		return categoryId;
 	}

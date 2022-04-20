@@ -23,9 +23,9 @@ public class IndexServiceImpl implements IndexService {
 	}
 
 	@Override
-	public List totalCategories() {
-		// TODO Auto-generated method stub
-		return null;
+	public List totalCategoryList() {
+		List totalCategoryList=this.indexDAO.totalCategories();
+		return totalCategoryList;
 	}
 
 	@Override
