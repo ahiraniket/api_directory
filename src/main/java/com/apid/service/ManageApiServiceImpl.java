@@ -15,31 +15,28 @@ public class ManageApiServiceImpl implements ManageApiService {
 
 	@Autowired
 	ManageApiDAO manageApiDAO;
-	
+
 	@Override
 	public void insertApi(ManageApiVO manageApiVO) {
-		manageApiVO.setApiStatus(true);
 		manageApiDAO.insertApi(manageApiVO);
 	}
 
 	@Override
 	public List viewApi() {
-		List viewApiList=manageApiDAO.viewApi();
+		List viewApiList = manageApiDAO.viewApi();
 		return viewApiList;
 	}
 
 	@Override
 	public List editApi(ManageApiVO manageApiVO) {
-		List editApiList=manageApiDAO.editApi(manageApiVO);
+		List editApiList = manageApiDAO.editApi(manageApiVO);
 		return editApiList;
-		
+
 	}
 
 	@Override
 	public void deleteApi(ManageApiVO manageApiVO) {
-		manageApiDAO.deleteApi(manageApiVO); 
+		manageApiDAO.deleteApi(manageApiVO);
 	}
 
-	
-	
 }

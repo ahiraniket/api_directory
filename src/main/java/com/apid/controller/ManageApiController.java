@@ -32,6 +32,7 @@ public class ManageApiController {
 
 	@GetMapping(value = "admin/insertApi")
 	public ModelAndView insertApi(@ModelAttribute ManageApiVO manageApiVO) {
+		manageApiVO.setApiStatus(true);
 		manageApiService.insertApi(manageApiVO);
 		return new ModelAndView("redirect:addApi");
 	}
@@ -46,21 +47,21 @@ public class ManageApiController {
 	public ModelAndView deleteApi(@RequestParam("apiId") int apiId) {
 		ManageApiVO manageApiVO = new ManageApiVO();
 		manageApiVO.setApiId(apiId);
-		
+
 		List editApiList = manageApiService.editApi(manageApiVO);
 		manageApiVO = (ManageApiVO) editApiList.get(0);
-		
+
 		manageApiVO.setApiStatus(false);
-		
+
 		manageApiService.insertApi(manageApiVO);
 		return new ModelAndView("redirect:viewApi");
 	}
 
 	@GetMapping(value = "admin/editApi")
 	public ModelAndView editApi(@RequestParam("apiId") int apiId) {
-		
+
 		List viewCategoryList = manageApiCategoryService.viewCategory();
-		
+
 		ManageApiVO manageApiVO = new ManageApiVO();
 		manageApiVO.setApiId(apiId);
 		List editApiList = manageApiService.editApi(manageApiVO);
