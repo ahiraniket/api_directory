@@ -22,8 +22,7 @@
 
 			<li class="nav-item nav-profile dropdown"><a
 				class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-				id="profileDropdown"> <img src="<%=request.getContextPath()%>/adminResources/image/user.png"
-					alt="profile" />
+				id="profileDropdown"> <img src="<%=request.getContextPath()%>/adminResources/image/user.png" alt="profile" />
 			</a>
 				<div class="dropdown-menu dropdown-menu-right navbar-dropdown"
 					aria-labelledby="profileDropdown">

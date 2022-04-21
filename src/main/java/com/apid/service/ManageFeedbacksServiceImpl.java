@@ -24,6 +24,11 @@ public class ManageFeedbacksServiceImpl implements ManageFeedbacksService  {
 		List viewFeedbacksList=manageFeedbacksDAO.viewFeedbacks();
 		return viewFeedbacksList;
 	}
+
+	@Override
+	public void insertFeedback(ManageFeedbacksVO manageFeedbacksVO) {
+		this.manageFeedbacksDAO.insertFeedback(manageFeedbacksVO);
+	}
 	
 	
 }

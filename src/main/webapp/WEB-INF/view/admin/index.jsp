@@ -66,7 +66,7 @@
 								class="card bg-gradient-warning text-white text-center card-shadow-warning">
 								<div class="card-body">
 									<h6 class="font-weight-normal">Total Users</h6>
-									<h2 class="mb-0">28893</h2>
+									<h2 class="mb-0">${totalUsersList}</h2>
 								</div>
 							</div>
 						</div>
@@ -75,12 +75,12 @@
 								class="card bg-gradient-info text-white text-center card-shadow-info">
 								<div class="card-body">
 									<h6 class="font-weight-normal">Total Feedbacks</h6>
-									<h2 class="mb-0">28893</h2>
+									<h2 class="mb-0">${totalFeedbacksList}</h2>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
+				 <div class="row">
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body pb-0">
@@ -186,7 +186,7 @@
 					</div>
 					
 					
-				<%-- 	<jsp:include page="orderStatus.jsp"></jsp:include> --%>
+				<%--	<jsp:include page="orderStatus.jsp"></jsp:include>
 					
 					
 					
@@ -204,7 +204,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --%>
 					<div class="row">
 						<div class="col-md-4 grid-margin grid-margin-md-0">
 							<div class="card">

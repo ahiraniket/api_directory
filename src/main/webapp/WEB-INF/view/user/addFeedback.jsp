@@ -62,18 +62,20 @@
 											<f:hidden path="feedbackId" />
 											<div class="form-group">
 												<fieldset class="rating">
-													<input type="radio" id="star5" name="rating" value="5" /><label
+												
+													<f:radiobutton id="star5" path="feedbackRating" value="5" /><label
 														class="full" for="star5" title="Awesome - 5 stars"></label>
 
-													<input type="radio" id="star4" name="rating" value="4" /><label
+													<f:radiobutton id="star4" path="feedbackRating" value="4" /><label
 														class="full" for="star4" title="Pretty good - 4 stars"></label>
 
-													<input type="radio" id="star3" name="rating" value="3" /><label
-														class="full" for="star3" title="Meh - 3 stars"></label> <input
-														type="radio" id="star2" name="rating" value="2" /><label
+													<f:radiobutton id="star3" path="feedbackRating" value="3" /><label
+														class="full" for="star3" title="Meh - 3 stars"></label>
+														 
+													<f:radiobutton id="star2" path="feedbackRating" value="2" /><label
 														class="full" for="star2" title="Kinda bad - 2 stars"></label>
 
-													<input type="radio" id="star1" name="rating" value="1" /><label
+													<f:radiobutton id="star1" path="feedbackRating" value="1" /><label
 														class="full" for="star1" title="Sucks big time - 1 star"></label>
 
 												</fieldset>
@@ -101,47 +103,29 @@
 								</div>
 								<div class="card-body">
 
-									<!-- For loop start here -->
+									<c:forEach var="i" items="${viewFeedbacksList}">
 
-									<div class="d-flex align-items-start profile-feed-item">
-										<img
-											src="<%=request.getContextPath()%>/userResources/image/face8.jpg"
-											class="img-sm rounded-circle" />
-										<div class="ml-4" style="width: 100%">
-											<h6>
-												User Name <small class="mr-2 text-muted float-right lead">
-
-													<!-- Star For loop start here --> <i
-													class="mdi mdi-star mr-1"></i> <!-- Star For loop End here -->
-												</small>
-											</h6>
-											<p>There is no better advertisement campaign that is low
-												cost and also successful at the same time.There is no better
-												advertisement campaign that is low cost and also successful
-												at the same time.</p>
-										</div>
-									</div>
-
-									<!-- For loop End here -->
-
-
-									<div class="profile-feed">
-										<c:forEach var="i" items="${viewFeedbacksList}">
-											<div class="d-flex align-items-start profile-feed-item">
-												<img class="img-sm rounded-circle"
-													src="<%=request.getContextPath()%>/userResources/image/face8.jpg"
-													alt="">
-												<div class="ml-4">
-													<h6>
-														<label for="ccomment">Rate</label> : ${i.feedbackRating}
-													</h6>
-													<br>
-													<p>${i.feedbackDescription}.</p>
-												</div>
+										<div class="d-flex align-items-start profile-feed-item">
+											<img class="img-sm rounded-circle"
+											src="<%=request.getContextPath()%>/adminResources/image/face7.jpg" alt="">
+											<div class="ml-4" style="width: 100%">
+												<h6>
+													${i.loginVO.username}
+													
+													 <small class="mr-2 text-muted float-right lead">
+														 <c:forEach  begin="1" end="${i.feedbackRating}">
+															<i class="mdi mdi-star mr-1"></i>
+														</c:forEach>
+													</small>
+												</h6>
+												<p>${i.feedbackDescription}</p>
 											</div>
+										</div>
 
-										</c:forEach>
-									</div>
+									</c:forEach>
+
+
+								
 								</div>
 
 							</div>

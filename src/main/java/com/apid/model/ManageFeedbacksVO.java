@@ -21,10 +21,20 @@ public class ManageFeedbacksVO {
 	private String feedbackDescription;
 	
 	@Column(name = "feedback_rating")
-	private String feedbackRating;
+	private int feedbackRating;
 	
 	@ManyToOne
 	private LoginVO loginVO;
+	
+	public LoginVO getLoginVO() {
+		return loginVO;
+	}
+
+	public void setLoginVO(LoginVO loginVO) {
+		this.loginVO = loginVO;
+	}
+
+
 
 	public int getFeedbackId() {
 		return feedbackId;
@@ -42,13 +52,14 @@ public class ManageFeedbacksVO {
 		this.feedbackDescription = feedbackDescription;
 	}
 
-	public String getFeedbackRating() {
+	public int getFeedbackRating() {
 		return feedbackRating;
 	}
 
-	public void setFeedbackRating(String feedbackRating) {
+	public void setFeedbackRating(int feedbackRating) {
 		this.feedbackRating = feedbackRating;
 	}
-	
+
+
 	
 }

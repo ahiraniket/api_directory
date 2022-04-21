@@ -9,5 +9,6 @@ public interface ManageFeedbacksService {
 
 	public List viewFeedbacks();
 		
+	public void insertFeedback(ManageFeedbacksVO manageFeedbacksVO);
 
 }
