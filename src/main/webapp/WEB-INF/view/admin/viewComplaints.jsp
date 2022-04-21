@@ -90,15 +90,13 @@
 														</c:if>
 														</td>
 														<td>
-															<c:if test="${i.complaintStatus == false}">
+															<c:if test="${i.complaintStatus eq 'Pending'}">
 																<a href="addComplaintReply?complaintId=${i.complaintId}"> <label class="btn btn-outline-success">Reply</label></a>
 															</c:if>
-															<c:if test="${i.complaintStatus == true}">
+															<c:if test="${i.complaintStatus eq 'Resolve'}">
 																<button type=button class="btn btn-success" disabled>Replied</button></a>
 															</c:if>
-															<a href="deleteComplaint?complaintId=${i.complaintId}"> 
-																<i class="mdi mdi-delete lead text-danger ml-3"></i>
-															</a>
+															
 														</td>
 													</tr>
 												</c:forEach>

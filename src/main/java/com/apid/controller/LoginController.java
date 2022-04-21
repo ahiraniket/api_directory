@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.apid.service.IndexService;
 import com.apid.service.ManageCategoryService;
 
-
 @Controller
 public class LoginController {
 
@@ -23,25 +22,31 @@ public class LoginController {
 	IndexService indexService;
 	@Autowired
 	ManageCategoryService manageCategoryService;
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView loadLogin() {
-		
+
 		return new ModelAndView("login");
 	}
 
 	@RequestMapping(value = "/admin/index", method = RequestMethod.GET)
 	public ModelAndView adminIndex() {
-		List totalApiList=this.indexService.totalApiList();
-		List totalCategoryList=this.indexService.totalCategoryList();
-		return new ModelAndView("admin/index").addObject("totalApiList",totalApiList.get(0)).addObject("totalCategoryList",totalCategoryList.get(0));
+		List totalApiList = this.indexService.totalApiList();
+		List totalCategoryList = this.indexService.totalCategoryList();
+		List totalUsersList = this.indexService.totalUsers();
+		List totalFeedbacksList = this.indexService.totalFeedbacks();
+		return new ModelAndView("admin/index")
+				.addObject("totalApiList", totalApiList.get(0))
+				.addObject("totalCategoryList", totalCategoryList.get(0))
+				.addObject("totalUsersList", totalUsersList.get(0))
+				.addObject("totalFeedbacksList", totalFeedbacksList.get(0));
 	}
 
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
 	public ModelAndView userIndex() {
-		
-		List viewCategoryList= this.manageCategoryService.viewCategory();
-		return new ModelAndView("user/index").addObject("viewCategoryList",viewCategoryList);
+
+		List viewCategoryList = this.manageCategoryService.viewCategory();
+		return new ModelAndView("user/index").addObject("viewCategoryList", viewCategoryList);
 	}
 
 	@RequestMapping(value = "logout", method = { RequestMethod.POST, RequestMethod.GET })

@@ -49,7 +49,7 @@
 						<div class="col-lg-12">
 							<div class="card">
 								<div class="card-header"
-									style="background: linear-gradient(91deg, #7571f9, transparent);"\>
+									style="background: linear-gradient(91deg, #7571f9, transparent);">
 									<h3 class="m-0 text-white">How Can I Help You</h3>
 								</div>
 								<div class="card-body">
@@ -59,12 +59,14 @@
 											<f:hidden path="complaintId" />
 											<div class="form-group">
 												<f:input id="complaintSubject" class="form-control"
-													path="complaintSubject" placeholder="Enter Your Querie Subject" type="text" />
+													path="complaintSubject"
+													placeholder="Enter Your Querie Subject" type="text" />
 											</div>
 
 											<div class="form-group">
 												<f:textarea id="ccomment" class="form-control"
-													path="complaintDescription" placeholder="Enter About Your Querie..." />
+													path="complaintDescription"
+													placeholder="Enter About Your Querie..." />
 											</div>
 											<input class="btn btn-primary" type="submit" value="Post">
 										</fieldset>
@@ -87,25 +89,26 @@
 										<c:forEach var="i" items="${viewComplaintList}">
 											<div class="d-flex align-items-start">
 												<img class="img-sm rounded-circle"
-													src="<%=request.getContextPath()%>/userResources/image/face8.jpg"
+													src="<%=request.getContextPath()%>/adminResources/image/face6.jpg"
 													alt="">
 												<div class="ml-4" style="width: 100%;">
 													<h6>
-														${i.complaintSubject} 
-														<small class="mr-2 text-muted float-right"><i
+														${i.complaintSubject} <small
+															class="mr-2 text-muted float-right"><i
 															class="mdi mdi-clock mr-1"></i>${i.complaintDate}</small>
 													</h6>
 													<p>${i.complaintDescription}.</p>
 												</div>
 											</div>
 											<c:if test="${i.complaintStatus eq 'Resolve'}">
-												<div class="d-flex align-items-start mt-2" style="color:green;margin-left: 250px">
+												<div class="d-flex align-items-start mt-2"
+													style="color: green; margin-left: 250px">
 													<img class="img-sm rounded-circle"
-														src="<%=request.getContextPath()%>/userResources/image/face8.jpg"
+														src="<%=request.getContextPath()%>/adminResources/image/face8.jpg"
 														alt="">
 													<div class="ml-4" style="width: 100%;">
 														<h6>
-															Reply <small class="mr-2 text-muted float-right"><i
+															admin <small class="mr-2 text-muted float-right"><i
 																class="mdi mdi-clock mr-1"></i>${i.replyDate}</small>
 														</h6>
 														<p>${i.complaintReply}</p>

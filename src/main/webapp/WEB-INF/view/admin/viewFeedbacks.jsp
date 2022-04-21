@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@ taglib prefix="z" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,19 +15,23 @@
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
 
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/star.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/star.css">
 
-<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
+<link rel="shortcut icon"
+	href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
 <body>
@@ -62,17 +67,24 @@
 											<thead>
 												<tr>
 													<th>No</th>
+													<th>Username</th>
 													<th class="col-6">Description</th>
 													<th>Rating</th>
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="i" items="${viewFeedbacksList}" varStatus="j">
+												<c:forEach var="i" items="${viewFeedbacksList}"
+													varStatus="j">
 
 													<tr>
-														<td>${j.count}</td>										
+														<td>${j.count}</td>
+														<td>${i.loginVO.username}</td>
 														<td class="col-6">${i.feedbackDescription}</td>
-														<td>${i.feedbackRating}</td>
+														<td><small class="mr-2 text-muted lead">
+																<c:forEach begin="1" end="${i.feedbackRating}">
+																	<i class="mdi mdi-star mr-1"></i>
+																</c:forEach>
+														</small></td>
 													</tr>
 												</c:forEach>
 											</tbody>
@@ -96,27 +108,44 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="<%=request.getContextPath()%>/adminResources/js/form-validation.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/bt-maxLength.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/formpickers.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/form-addons.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/x-editable.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/dropify.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/dropzone.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/jquery-file-upload.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/formpickers.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/form-repeater.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/form-validation.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/bt-maxLength.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/formpickers.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/form-addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/x-editable.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/dropify.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/dropzone.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/jquery-file-upload.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/formpickers.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/form-repeater.js"></script>
 	<!-- End custom js for this page-->
 </body>
 

@@ -24,6 +24,12 @@ public class ManageFeedbacksDAOImpl implements ManageFeedbacksDAO {
 		List viewFeedbacksList=q.list();
 		return viewFeedbacksList;
 	}
+
+	@Override
+	public void insertFeedback(ManageFeedbacksVO manageFeedbacksVO) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.saveOrUpdate(manageFeedbacksVO);
+	}
 	
 	
 }

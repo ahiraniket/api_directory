@@ -28,17 +28,22 @@ public class IndexDAOImpl implements IndexDAO {
 		List totalCategoryList=q.list();
 		return totalCategoryList;
 	}
+	
 
 	@Override
 	public List totalUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = this.sessionFactory.openSession();
+		Query q= session.createQuery("SELECT COUNT(*) FROM LoginVO");
+		List totalCategoryList=q.list();
+		return totalCategoryList;
 	}
 
 	@Override
 	public List totalFeedbacks() {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = this.sessionFactory.openSession();
+		Query q= session.createQuery("SELECT COUNT(*) FROM ManageFeedbacksVO");
+		List totalCategoryList=q.list();
+		return totalCategoryList;
 	}
 
 }

@@ -30,14 +30,14 @@ public class IndexServiceImpl implements IndexService {
 
 	@Override
 	public List totalUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		List totalUsersList=this.indexDAO.totalUsers();
+		return totalUsersList;
 	}
 
 	@Override
 	public List totalFeedbacks() {
-		// TODO Auto-generated method stub
-		return null;
+		List totalFeedbacksList=this.indexDAO.totalFeedbacks();
+		return totalFeedbacksList;
 	}
 
 }

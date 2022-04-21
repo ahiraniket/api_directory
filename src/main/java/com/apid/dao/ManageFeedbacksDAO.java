@@ -8,6 +8,8 @@ import com.apid.model.ManageFeedbacksVO;
 public interface ManageFeedbacksDAO {
 	
 	public List viewFeedbacks();
+
+	public void insertFeedback(ManageFeedbacksVO manageFeedbacksVO);
 	
 
 }
