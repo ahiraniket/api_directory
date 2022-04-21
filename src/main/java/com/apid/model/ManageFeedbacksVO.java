@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -16,14 +17,14 @@ public class ManageFeedbacksVO {
 	@Column(name = "feedback_id")
 	private int feedbackId;
 
-	@Column(name = "feedback_user")
-	private String feedbackUser;
-
 	@Column(name = "feedback_description")
 	private String feedbackDescription;
 	
 	@Column(name = "feedback_rating")
 	private String feedbackRating;
+	
+	@ManyToOne
+	private LoginVO loginVO;
 
 	public int getFeedbackId() {
 		return feedbackId;
@@ -31,14 +32,6 @@ public class ManageFeedbacksVO {
 
 	public void setFeedbackId(int feedbackId) {
 		this.feedbackId = feedbackId;
-	}
-
-	public String getFeedbackUser() {
-		return feedbackUser;
-	}
-
-	public void setFeedbackUser(String feedbackUser) {
-		this.feedbackUser = feedbackUser;
 	}
 
 	public String getFeedbackDescription() {

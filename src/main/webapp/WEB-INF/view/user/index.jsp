@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="z" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,307 +14,30 @@
 <title>APID | Home</title>
 <!-- plugins:css -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/adminResources/userCSS/materialdesignicons.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/userCSS/vendor.bundle.base.css">
+	href="<%=request.getContextPath()%>/userResources/css/materialdesignicons.min.css">
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/adminResources/userCSS/vendor.bundle.addons.css">
+	href="<%=request.getContextPath()%>/userResources/css/vendor.bundle.base.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/userResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/userCSS/style.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/userResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/userImage/favicon.png"/>
+<link rel="shortcut icon"
+	href="<%=request.getContextPath()%>/userResources/image/favicon.png" />
 </head>
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_horizontal-navbar.html -->
 		<div class="horizontal-menu">
-		<!-- ------------Header------------- -->
-		
+			<!-- ------------Header------------- -->
+
 			<jsp:include page="header.jsp"></jsp:include>
-		
-		
-			<nav class="bottom-navbar">
-				<div class="container">
-					<ul class="nav page-navigation">
-						<li class="nav-item"><a class="nav-link" href="#">
-								<i class="mdi mdi-view-dashboard-outline menu-icon"></i> <span
-								class="menu-title">Dashboard</span>
-						</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="pages/widgets/widgets.html"> <i
-								class="mdi mdi-airplay menu-icon"></i> <span class="menu-title">Widgets</span>
-						</a></li>
-						<li class="nav-item mega-menu"><a href="#" class="nav-link">
-								<i class="mdi mdi-puzzle-outline menu-icon"></i> <span
-								class="menu-title">UI Elements</span> <i class="menu-arrow"></i>
-						</a>
-							<div class="submenu">
-								<div class="col-group-wrapper row">
-									<div class="col-group col-md-4">
-										<div class="row">
-											<div class="col-12">
-												<p class="category-heading">Basic Elements</p>
-												<div class="submenu-item">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/accordions.html">Accordion</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/buttons.html">Buttons</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/badges.html">Badges</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/dropdowns.html">Dropdown</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/modals.html">Modals</a></li>
-															</ul>
-														</div>
-														<div class="col-md-6">
-															<ul>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/progress.html">Progress bar</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/pagination.html">Pagination</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/tabs.html">Tabs</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/typography.html">Typography</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/tooltips.html">Tooltip</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-group col-md-4">
-										<div class="row">
-											<div class="col-12">
-												<p class="category-heading">Advanced Elements</p>
-												<div class="submenu-item">
-													<div class="row">
-														<div class="col-md-6">
-															<ul>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/dragula.html">Dragula</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/carousel.html">Carousel</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/clipboard.html">Clipboard</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/context-menu.html">Context
-																		Menu</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/loaders.html">Loader</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/slider.html">Slider</a></li>
-															</ul>
-														</div>
-														<div class="col-md-6">
-															<ul>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/popups.html">Popup</a></li>
-																<li class="nav-item"><a class="nav-link"
-																	href="pages/ui-features/notifications.html">Notification</a></li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-group col-md-4">
-										<p class="category-heading">Icons</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/icons/flag-icons.html">Flag Icons</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/icons/font-awesome.html">Font Awesome</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/icons/simple-line-icon.html">Simple Line
-													Icons</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/icons/themify.html">Themify Icons</a></li>
-										</ul>
-									</div>
-								</div>
-							</div></li>
-						<li class="nav-item"><a href="#" class="nav-link"> <i
-								class="mdi mdi-file-document-box-outline menu-icon"></i> <span
-								class="menu-title">Forms</span> <i class="menu-arrow"></i></a>
-							<div class="submenu">
-								<ul class="submenu-item">
-									<li class="nav-item"><a class="nav-link"
-										href="pages/forms/basic_elements.html">Basic Elements</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/forms/advanced_elements.html">Advanced
-											Elements</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/forms/validation.html">Validation</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/forms/wizard.html">Wizard</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/forms/text_editor.html">Text Editor</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/forms/code_editor.html">Code Editor</a></li>
-								</ul>
-							</div></li>
-						<li class="nav-item mega-menu"><a href="#" class="nav-link">
-								<i class="mdi mdi-finance menu-icon"></i> <span
-								class="menu-title">Data</span> <i class="menu-arrow"></i>
-						</a>
-							<div class="submenu">
-								<div class="col-group-wrapper row">
-									<div class="col-group col-md-6">
-										<p class="category-heading">Charts</p>
-										<div class="submenu-item">
-											<div class="row">
-												<div class="col-md-6">
-													<ul>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/chartjs.html">Chart Js</a></li>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/morris.html">Morris</a></li>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/flot-chart.html">Flot</a></li>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/google-charts.html">Google Chart</a></li>
-													</ul>
-												</div>
-												<div class="col-md-6">
-													<ul>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/sparkline.html">Sparkline</a></li>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/c3.html">C3 Chart</a></li>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/chartist.html">Chartist</a></li>
-														<li class="nav-item"><a class="nav-link"
-															href="pages/charts/justGage.html">JustGage</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-group col-md-3">
-										<p class="category-heading">Table</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/tables/basic-table.html">Basic Table</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/tables/data-table.html">Data Table</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/tables/js-grid.html">Js-grid</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/tables/sortable-table.html">Sortable Table</a></li>
-										</ul>
-									</div>
-									<div class="col-group col-md-3">
-										<p class="category-heading">Maps</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/maps/mapeal.html">Mapeal</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/maps/vector-map.html">Vector Map</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/maps/google-maps.html">Google Map</a></li>
-										</ul>
-									</div>
-								</div>
-							</div></li>
-						<li class="nav-item mega-menu"><a href="#" class="nav-link">
-								<i class="mdi mdi-codepen menu-icon"></i> <span
-								class="menu-title">Sample Pages</span> <i class="menu-arrow"></i>
-						</a>
-							<div class="submenu">
-								<div class="col-group-wrapper row">
-									<div class="col-group col-md-3">
-										<p class="category-heading">User Pages</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/login.html">Login</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/login-2.html">Login 2</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/register.html">Register</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/register-2.html">Register 2</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/lock-screen.html">Lockscreen</a></li>
-										</ul>
-									</div>
-									<div class="col-group col-md-3">
-										<p class="category-heading">Error Pages</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/error-400.html">400</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/error-404.html">404</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/error-500.html">500</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/error-505.html">505</a></li>
-										</ul>
-									</div>
-									<div class="col-group col-md-3">
-										<p class="category-heading">E-commerce</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/invoice.html">Invoice</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/pricing-table.html">Pricing Table</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/orders.html">Orders</a></li>
-										</ul>
-									</div>
-									<div class="col-group col-md-3">
-										<p class="category-heading">General</p>
-										<ul class="submenu-item">
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/search-results.html">Search Results</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/profile.html">Profile</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/timeline.html">Timeline</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/news-grid.html">News grid</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/portfolio.html">Portfolio</a></li>
-											<li class="nav-item"><a class="nav-link"
-												href="pages/samples/faq.html">FAQ</a></li>
-										</ul>
-									</div>
-								</div>
-							</div></li>
-						<li class="nav-item"><a href="#" class="nav-link"> <i
-								class="mdi mdi-image-filter menu-icon"></i> <span
-								class="menu-title">Apps</span> <i class="menu-arrow"></i></a>
-							<div class="submenu">
-								<ul class="submenu-item">
-									<li class="nav-item"><a class="nav-link"
-										href="pages/apps/email.html">Email</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/apps/calendar.html">Calendar</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/apps/todo.html">Todo List</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="pages/apps/gallery.html">Gallery</a></li>
-								</ul>
-							</div></li>
-						<li class="nav-item"><a
-							href="pages/documentation/documentation.html" class="nav-link">
-								<i class="mdi mdi-file-document-box-outline menu-icon"></i> <span
-								class="menu-title">Documentation</span>
-						</a></li>
-					</ul>
-				</div>
-			</nav>
+
+			<jsp:include page="bottomNavBar.jsp"></jsp:include>
 		</div>
 
 		<!-- partial -->
@@ -319,314 +45,36 @@
 			<div class="main-panel">
 				<div class="content-wrapper">
 					<div class="row">
-						<div class="col-md-6 col-lg-3 grid-margin stretch-card">
-							<div
-								class="card bg-gradient-primary text-white text-center card-shadow-primary">
-								<div class="card-body">
-									<h6 class="font-weight-normal">Total invoices</h6>
-									<h2 class="mb-0">28893</h2>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3 grid-margin stretch-card">
-							<div
-								class="card bg-gradient-danger text-white text-center card-shadow-danger">
-								<div class="card-body">
-									<h6 class="font-weight-normal">Total invoices</h6>
-									<h2 class="mb-0">28893</h2>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3 grid-margin stretch-card">
-							<div
-								class="card bg-gradient-warning text-white text-center card-shadow-warning">
-								<div class="card-body">
-									<h6 class="font-weight-normal">Total invoices</h6>
-									<h2 class="mb-0">28893</h2>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3 grid-margin stretch-card">
-							<div
-								class="card bg-gradient-info text-white text-center card-shadow-info">
-								<div class="card-body">
-									<h6 class="font-weight-normal">Total invoices</h6>
-									<h2 class="mb-0">28893</h2>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<h4 class="card-title">Daily Sales</h4>
-									<div
-										class="d-flex justify-content-between justify-content-lg-start flex-wrap">
-										<div class="mr-5 mb-2">
-											<h3>56789</h3>
-											<h6 class="font-weight-normal mb-0">Online sales</h6>
-										</div>
-										<div class="mb-2">
-											<h3>12345</h3>
-											<h6 class="font-weight-normal mb-0">Sales in store</h6>
-										</div>
-									</div>
-								</div>
-								<div class="card-body d-flex align-items-end p-0">
-									<div class="mt-auto w-100">
-										<div id="sales-legend" class="chartjs-legend mt-2 mb-4"></div>
-										<canvas id="chart-sales"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 grid-margin stretch-card">
+						<div class="col-md-12 grid-margin grid-margin-md-0">
 							<div class="card">
 								<div class="card-body">
-									<div class="d-flex justify-content-between">
-										<h6 class="card-title">Activity</h6>
-									</div>
-									<div class="list d-flex align-items-center border-bottom pb-3">
-										<img class="img-sm rounded-circle"
-											src="<%=request.getContextPath()%>/adminResources/userImage/face8.jpg" alt="">
-										<div class="wrapper w-100 ml-3">
-											<p>
-												<b>Dobrick </b>published an article
-											</p>
-											<small class="text-muted">2 hours ago</small>
+									<div class="row">
+										<div class="col-6">
+											<img class="rounded mw-100" alt=""
+												src="<%=request.getContextPath()%>/userResources/image/about.jpg">
 										</div>
-									</div>
-									<div class="list d-flex align-items-center border-bottom py-3">
-										<img class="img-sm rounded-circle"
-											src="<%=request.getContextPath()%>/adminResources/userImage/face5.jpg" alt="">
-										<div class="wrapper w-100 ml-3">
-											<p>
-												<b>Stella </b>created an event
-											</p>
-											<small class="text-muted">3 hours ago</small>
-										</div>
-									</div>
-									<div class="list d-flex align-items-center border-bottom py-3">
-										<img class="img-sm rounded-circle"
-											src="<%=request.getContextPath()%>/adminResources/userImage/face7.jpg" alt="">
-										<div class="wrapper w-100 ml-3">
-											<p>
-												<b>Peter </b>submitted the reports
-											</p>
-											<small class="text-muted">1 hours ago</small>
-										</div>
-									</div>
-									<div class="list d-flex align-items-center border-bottom py-3">
-										<img class="img-sm rounded-circle"
-											src="<%=request.getContextPath()%>/adminResources/userImage/face6.jpg" alt="">
-										<div class="wrapper w-100 ml-3">
-											<p>
-												<b>Nateila </b>updated the docs
-											</p>
-											<small class="text-muted">1 hours ago</small>
-										</div>
-									</div>
-									<div class="list d-flex align-items-center pt-3">
-										<img class="img-sm rounded-circle"
-											src="<%=request.getContextPath()%>/adminResources/userImage/face9.jpg" alt="">
-										<div class="wrapper w-100 ml-3">
-											<p>
-												<b>Tom </b>uploaded the demo
-											</p>
-											<small class="text-muted">3 hours ago</small>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Traffic</h4>
-									<div class="w-50 mx-auto">
-										<canvas id="traffic-chart" width="100" height="100"></canvas>
-									</div>
-									<div class="text-center mt-5">
-										<h4 class="mb-2">
-											Traffic for the day
-											</h5>
-											<p class="card-description mb-5">Traffic through the
-												sources google and facebook for the day</p>
-									</div>
-									<div id="traffic-chart-legend"
-										class="chartjs-legend traffic-chart-legend"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row grid-margin">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Order status</h4>
-									<div class="d-flex table-responsive">
-										<div class="btn-group mr-2">
-											<button class="btn btn-sm btn-primary">
-												<i class="mdi mdi-plus-circle-outline"></i> Add
-											</button>
-										</div>
-										<div class="btn-group mr-2">
-											<button type="button" class="btn btn-light">
-												<i class="mdi mdi-alert-circle-outline"></i>
-											</button>
-											<button type="button" class="btn btn-light">
-												<i class="mdi mdi-delete-empty"></i>
-											</button>
-										</div>
-										<div class="btn-group mr-2">
-											<button type="button" class="btn btn-light">
-												<i class="mdi mdi-printer"></i>
-											</button>
-										</div>
-										<div class="btn-group ml-auto mr-2 border-0 d-none d-md-block">
-											<input type="text" class="form-control"
-												placeholder="Search Here">
-										</div>
-										<div class="btn-group">
-											<button type="button" class="btn btn-light">
-												<i class="mdi mdi-cloud"></i>
-											</button>
-											<button type="button" class="btn btn-light">
-												<i class="mdi mdi-dots-vertical"></i>
-											</button>
-										</div>
-									</div>
-									<div class="table-responsive mt-2">
-										<table class="table mt-3 border-top">
-											<thead>
-												<tr>
-													<th>Invoice</th>
-													<th>Customer</th>
-													<th>Ship</th>
-													<th>Best Price</th>
-													<th>Purchsed Price</th>
-													<th>Status</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>50014</td>
-													<td>David Grey</td>
-													<td>Italy</td>
-													<td>$6300</td>
-													<td>$2100</td>
-													<td><div class="badge badge-success badge-fw">Progress</div></td>
-												</tr>
-												<tr>
-													<td>50015</td>
-													<td>Stella Johnson</td>
-													<td>Brazil</td>
-													<td>$4500</td>
-													<td>$4300</td>
-													<td><div class="badge badge-warning badge-fw">Open</div></td>
-												</tr>
-												<tr>
-													<td>50016</td>
-													<td>Marina Michel</td>
-													<td>Japan</td>
-													<td>$4300</td>
-													<td>$6440</td>
-													<td><div class="badge badge-danger badge-fw">On
-															hold</div></td>
-												</tr>
-												<tr>
-													<td>50017</td>
-													<td>John Doe</td>
-													<td>India</td>
-													<td>$6400</td>
-													<td>$2200</td>
-													<td><div class="badge badge-success badge-fw">Progress</div></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div
-										class="d-flex align-items-center justify-content-between flex-column flex-sm-row mt-4">
-										<p class="mb-3 mb-sm-0">Showing 1 to 20 of 20 entries</p>
-										<nav>
-											<ul class="pagination pagination-primary mb-0">
-												<li class="page-item"><a class="page-link"><i
-														class="mdi mdi-chevron-left"></i></a></li>
-												<li class="page-item active"><a class="page-link">1</a></li>
-												<li class="page-item"><a class="page-link">2</a></li>
-												<li class="page-item"><a class="page-link">3</a></li>
-												<li class="page-item"><a class="page-link">4</a></li>
-												<li class="page-item"><a class="page-link"><i
-														class="mdi mdi-chevron-right"></i></a></li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 grid-margin">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Monthly Analytics</h4>
-									<p class="card-description">Products that are creating the
-										most revenue and their sales throughout the year and the
-										variation in behavior of sales.</p>
-									<div id="js-legend"
-										class="chartjs-legend mt-4 mb-5 analytics-legend"></div>
-									<div class="demo-chart">
-										<canvas id="dashboard-monthly-analytics"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 grid-margin grid-margin-md-0">
-							<div class="card">
-								<div class="card-body">
-									<div
-										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
-										<img class="img-md rounded" src="<%=request.getContextPath()%>/adminResources/userImage/face1.jpg"
-											alt="">
-										<div class="wrapper ml-4">
-											<p class="font-weight-medium">Tim Cook</p>
-											<p class="text-muted">timcook@gmail.com</p>
-											<p class="text-info mb-0 font-weight-medium">Designer</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 grid-margin grid-margin-md-0">
-							<div class="card">
-								<div class="card-body">
-									<div
-										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
-										<img class="img-md rounded" src="<%=request.getContextPath()%>/adminResources/userImage/face2.jpg"
-											alt="">
-										<div class="wrapper ml-4">
-											<p class="font-weight-medium">Sarah Graves</p>
-											<p class="text-muted">Sarah@gmail.com</p>
-											<p class="text-info mb-0 font-weight-medium">Developer</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card">
-								<div class="card-body">
-									<div
-										class="wrapper d-flex align-items-center justify-content-start justify-content-sm-center flex-wrap">
-										<img class="img-md rounded" src="<%=request.getContextPath()%>/adminResources/userImage/face3.jpg"
-											alt="">
-										<div class="wrapper ml-4">
-											<p class="font-weight-medium">David Grey</p>
-											<p class="text-muted">David@gmail.com</p>
-											<p class="text-info mb-0 font-weight-medium">Support Lead</p>
+										<div class="col-6">
+											<h3>About Project Name</h3>
+											<p class="text-justify text-muted" style="line-height: 1.7;">When
+												I first got into the online advertising business, I was
+												looking for the magical combination that would put my
+												website into the top search engine rankings When I first got
+												into the online advertising business, I was looking for the
+												magical combination that would put my website into the top
+												search engine rankings When I first got into the online
+												advertising business, I was looking for the magical
+												combination that would put my website into the top search
+												engine rankings</p>
+											<p class="text-justify text-muted" style="line-height: 1.7;">When
+												I first got into the online advertising business, I was
+												looking for the magical combination that would put my
+												website into the top search engine rankings When I first got
+												into the online advertising business, I was looking for the
+												magical combination that would put my website into the top
+												search engine rankings When I first got into the online
+												advertising business, I was looking for the magical
+												combination that would put my website into the top search
+												engine rankings</p>
 										</div>
 									</div>
 								</div>
@@ -646,21 +94,30 @@
 	<!-- container-scroller -->
 
 	<!-- plugins:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/vendor.bundle.base.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/vendor.bundle.addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/vendor.bundle.base.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- Plugin js for this page-->
 	<!-- End plugin js for this page-->
 	<!-- inject:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/off-canvas.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/hoverable-collapse.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/template.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/settings.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/off-canvas.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/hoverable-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/template.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/settings.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/dashboard.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/userJS/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/dashboard.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/userResources/js/todolist.js"></script>
 	<!-- End custom js for this page-->
 </body>
 

@@ -40,4 +40,9 @@ public class ManageCategoryServiceImpl implements ManageCategoryService {
 	public void deleteCategory(ManageCategoryVO manageCategoryVO) {
 		manageCategoryDAO.deleteCategory(manageCategoryVO);
 	}
+
+	@Override
+	public List viewApiCategory(int categoryId) {
+		return manageCategoryDAO.viewApiCategory(categoryId);
+	}
 }

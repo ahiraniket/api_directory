@@ -23,6 +23,9 @@
 <!-- inject:css -->
 <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
+
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/star.css">
+
 <link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
@@ -59,10 +62,8 @@
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>User</th>
 													<th class="col-6">Description</th>
 													<th>Rating</th>
-													<th>Actions</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -70,29 +71,11 @@
 
 													<tr>
 														<td>${j.count}</td>										
-														<td>${i.feedbackUser}</td>
 														<td class="col-6">${i.feedbackDescription}</td>
 														<td>${i.feedbackRating}</td>
-														<td><a href="deleteFeedback?feedbackId=${i.feedbackId}"> <i
-																class="mdi mdi-delete lead text-danger ml-3"></i>
-														</a></td>
 													</tr>
 												</c:forEach>
 											</tbody>
-											<!-- <tbody>
-												<tr>
-													<td>parthpatat@gmail.com</td>
-													<td><i class="mdi mdi-star lead"></i> <i
-														class="mdi mdi-star lead"></i> <i
-														class="mdi mdi-star lead"></i> <i
-														class="mdi mdi-star lead"></i></td>
-													<td>In publishing and graphic design, Lorem ipsum is a
-														placeholder text</td>
-													<td><a href=""> <i
-															class="mdi mdi-delete lead text-danger ml-3"></i>
-													</a></td>
-												</tr>
-											</tbody> -->
 										</table>
 									</div>
 								</div>

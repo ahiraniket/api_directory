@@ -65,6 +65,7 @@
 													<th>User</th>
 													<th>Subject</th>
 													<th>Description</th>
+													<th>Complaint Time</th>
 													<th>Attachments</th>
 													<th>Reply</th>
 													<th>Action</th>
@@ -74,11 +75,20 @@
 												<c:forEach var="i" items="${viewComplaintsList}" varStatus="j">
 													<tr>
 														<td>${j.count}</td>
-														<td>${i.complaintUser}</td>
+														<td>${i.loginVO.username}</td>
 														<td>${i.complaintSubject}</td>
 														<td>${i.complaintDescription}</td>
+														<td>${i.complaintDate}</td>
 														<td>Attachments</td>
-														<td>${i.complaintReply}</td>
+														<td>
+														<c:if test="${i.complaintStatus eq 'Pending'}">
+														<p style="color: red">${i.complaintStatus}</p>
+														
+														</c:if>
+														<c:if test="${i.complaintStatus eq 'Resolve'}">
+														<p style="color: #06c258">${i.complaintStatus}</p>
+														</c:if>
+														</td>
 														<td>
 															<c:if test="${i.complaintStatus == false}">
 																<a href="addComplaintReply?complaintId=${i.complaintId}"> <label class="btn btn-outline-success">Reply</label></a>

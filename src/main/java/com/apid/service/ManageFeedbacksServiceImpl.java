@@ -25,8 +25,5 @@ public class ManageFeedbacksServiceImpl implements ManageFeedbacksService  {
 		return viewFeedbacksList;
 	}
 	
-	@Override
-	public void deleteFeedback(ManageFeedbacksVO manageFeedbacksVO) {
-		manageFeedbacksDAO.deleteFeedback(manageFeedbacksVO); 
-	}
+	
 }

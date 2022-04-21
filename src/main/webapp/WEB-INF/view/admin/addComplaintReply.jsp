@@ -15,16 +15,19 @@
 <!-- plugins:css -->
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.base.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/adminResources/css/vendor.bundle.addons.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
+<link rel="shortcut icon"
+	href="<%=request.getContextPath()%>/adminResources/image/favicon.png" />
 </head>
 
 <body>
@@ -54,36 +57,37 @@
 									<h3 class="m-0 text-white">${formName}</h3>
 								</div>
 								<div class="card-body">
-									<f:form class="cmxform" method="get" action="insertComplaint" modelAttribute="manageComplaintsVO">
+									<f:form class="cmxform" method="get" action="saveComplaintReply"
+										modelAttribute="manageComplaintsVO">
 										<div class="row">
-											
-											<c:forEach var="i" items="${viewComplaintsList}">
-												<div class="form-group">
-													<label>User</label> 
-													<f:input class="form-control" type="text" path="${i.complaintUser}" readonly />
-												</div>
-												
-												<div class="form-group">
-													<label>Subject</label> 
-													<f:input class="form-control" type="text" path="${i.complaintSubject}" readonly />
-												</div>
-	
-												<div class="form-group">
-													<label>Description</label> 
-													<f:textarea class="form-control" type="text" path="${i.complaintDescription}" readonly />
-												</div>
-	
-												<div class="form-group">
-													<label>Attachments</label> 
-												</div>
-												
-												<div class="form-group">
-													<label>Reply</label>
-													<f:textarea class="form-control" type="text" path="${i.complaintReply }" required />
-												</div>
-											</c:forEach>
+											<f:hidden path="complaintId" />
+											<f:hidden path="complaintDate" />
+											<f:hidden path="complaintStatus" />
+											<f:hidden path="loginVO.id" />
+
+
+											<div class="form-group">
+												<label>Subject</label>
+												<f:input class="form-control" type="text"
+													path="complaintSubject" readonly="readonly" />
+											</div>
+
+											<div class="form-group">
+												<label>Description</label>
+												<f:textarea class="form-control" type="text"
+													path="complaintDescription" readonly="readonly" />
+											</div>
+
+
+											<div class="form-group">
+												<label>Reply</label>
+												<f:textarea class="form-control" type="text"
+													path="complaintReply" required="required" />
+											</div>
+
 											<input class="btn btn-primary" type="submit" value="Reply">
-										<f:hidden path="complaintId" />
+
+										</div>
 									</f:form>
 								</div>
 							</div>
@@ -103,17 +107,26 @@
 	</div>
 	<!-- container-scroller -->
 	<!-- plugins:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.base.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/vendor.bundle.addons.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<script src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/off-canvas.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/hoverable-collapse.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/template.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/settings.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page-->
-	<script src="<%=request.getContextPath()%>/adminResources/js/form-validation.js"></script>
-	<script src="<%=request.getContextPath()%>/adminResources/js/bt-maxLength.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/form-validation.js"></script>
+	<script
+		src="<%=request.getContextPath()%>/adminResources/js/bt-maxLength.js"></script>
 	<!-- End custom js for this page-->
