@@ -25,9 +25,5 @@ public class ManageFeedbacksDAOImpl implements ManageFeedbacksDAO {
 		return viewFeedbacksList;
 	}
 	
-	@Override
-	public void deleteFeedback(ManageFeedbacksVO manageFeedbacksVO) {
-		Session session = this.sessionFactory.getCurrentSession();
-		session.delete(manageFeedbacksVO);
-	}
+	
 }

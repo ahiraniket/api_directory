@@ -13,4 +13,6 @@ public interface ManageCategoryService {
 	public List editCategory(ManageCategoryVO manageApiCategoryVO);
 	
 	public void deleteCategory(ManageCategoryVO manageApiCategoryVO);
+
+	public List viewApiCategory(int categoryId);
 }

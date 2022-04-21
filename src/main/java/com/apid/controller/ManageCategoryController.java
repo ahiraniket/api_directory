@@ -38,6 +38,18 @@ public class ManageCategoryController {
 		List viewCategoryList = manageCategoryService.viewCategory();
 		return new ModelAndView("admin/viewCategory", "viewCategoryList", viewCategoryList);
 	}
+	
+	@GetMapping(value = "user/viewCategories")
+	public ModelAndView viewCategories() {
+		List viewCategoryList = manageCategoryService.viewCategory();
+		return new ModelAndView("user/viewCategories", "viewCategoryList", viewCategoryList);
+	}
+	
+	@GetMapping(value = "user/viewApiCategory")
+	public ModelAndView viewApiCategory(@RequestParam("categoryId") int categoryId) {
+		List viewApiCategoryList=this.manageCategoryService.viewApiCategory(categoryId);
+		return new ModelAndView("user/viewApiCategory", "viewApiCategoryList", viewApiCategoryList);
+	}
 
 	@GetMapping(value = "admin/deleteCategory")
 	public ModelAndView deleteCategory(@RequestParam("categoryId") int categoryId) {

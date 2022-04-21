@@ -47,4 +47,13 @@ public class ManageCategoryDAOImpl implements ManageCategoryDAO {
 		session.delete(manageCategoryVO);
 	}
 
+	@Override
+	public List viewApiCategory(int categoryId) { 
+		Session session = this.sessionFactory.openSession();
+		Query q = session
+				.createQuery("FROM ManageApiVO WHERE category_id = '"+categoryId+"' GROUP BY api_name");
+		List viewApiCategoryList=q.list();
+		return viewApiCategoryList;
+	}
+
 }

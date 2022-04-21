@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import com.apid.service.IndexService;
+import com.apid.service.ManageCategoryService;
 
 
 @Controller
@@ -20,6 +21,8 @@ public class LoginController {
 
 	@Autowired
 	IndexService indexService;
+	@Autowired
+	ManageCategoryService manageCategoryService;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView loadLogin() {
@@ -37,7 +40,8 @@ public class LoginController {
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
 	public ModelAndView userIndex() {
 		
-		return new ModelAndView("user/index");
+		List viewCategoryList= this.manageCategoryService.viewCategory();
+		return new ModelAndView("user/index").addObject("viewCategoryList",viewCategoryList);
 	}
 
 	@RequestMapping(value = "logout", method = { RequestMethod.POST, RequestMethod.GET })

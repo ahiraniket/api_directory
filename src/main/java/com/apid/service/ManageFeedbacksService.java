@@ -9,5 +9,5 @@ public interface ManageFeedbacksService {
 
 	public List viewFeedbacks();
 		
-	public void deleteFeedback(ManageFeedbacksVO manageFeedbacksVO);
+
 }

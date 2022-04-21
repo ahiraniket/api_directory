@@ -35,4 +35,15 @@ public class ManageComplaintsServiceImpl implements ManageComplaintsService{
 		
 	}
 
+	@Override
+	public void insertComplaints(ManageComplaintsVO manageComplaintsVO) {
+		this.manageComplaintsDAO.insertComplaints(manageComplaintsVO);
+		
+	}
+
+	@Override
+	public List getComplainByLoginId(int loginId) {
+		return manageComplaintsDAO.getComplainByLoginId(loginId);
+	}
+
 }

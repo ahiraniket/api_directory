@@ -14,4 +14,6 @@ public interface ManageCategoryDAO {
 
 	public void deleteCategory(ManageCategoryVO manageCategoryVO);
 
+	public List viewApiCategory(int categoryId);
+
 }

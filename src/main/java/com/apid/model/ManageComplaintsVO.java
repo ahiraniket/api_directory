@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,9 +16,6 @@ public class ManageComplaintsVO {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "complaint_id")
 	private int complaintId;
-
-	@Column(name = "complaint_user")
-	private String complaintUser;
 
 	@Column(name = "complaint_subject")
 	private String complaintSubject;
@@ -30,65 +28,81 @@ public class ManageComplaintsVO {
 	
 	@Column(name = "complaint_reply")
 	private String complaintReply;
+	
+	@Column(name = "reply_date")
+	private String replyDate;
 
 	@Column(name = "complaint_status")
-	private boolean complaintStatus;
+	private String complaintStatus="Pending";
+	
+	@ManyToOne
+	private LoginVO loginVO;
 
 	public int getComplaintId() {
 		return complaintId;
-	}
-
-	public void setComplaintId(int complaintId) {
-		this.complaintId = complaintId;
-	}
-
-	public String getComplaintUser() {
-		return complaintUser;
-	}
-
-	public void setComplaintUser(String complaintUser) {
-		this.complaintUser = complaintUser;
 	}
 
 	public String getComplaintSubject() {
 		return complaintSubject;
 	}
 
-	public void setComplaintSubject(String complaintSubject) {
-		this.complaintSubject = complaintSubject;
-	}
-
 	public String getComplaintDate() {
 		return complaintDate;
-	}
-
-	public void setComplaintDate(String complaintDate) {
-		this.complaintDate = complaintDate;
 	}
 
 	public String getComplaintDescription() {
 		return complaintDescription;
 	}
 
-	public void setComplaintDescription(String complaintDescription) {
-		this.complaintDescription = complaintDescription;
-	}
-
 	public String getComplaintReply() {
 		return complaintReply;
+	}
+
+	public String getReplyDate() {
+		return replyDate;
+	}
+
+	public String getComplaintStatus() {
+		return complaintStatus;
+	}
+
+	public LoginVO getLoginVO() {
+		return loginVO;
+	}
+
+	public void setComplaintId(int complaintId) {
+		this.complaintId = complaintId;
+	}
+
+	public void setComplaintSubject(String complaintSubject) {
+		this.complaintSubject = complaintSubject;
+	}
+
+	public void setComplaintDate(String complaintDate) {
+		this.complaintDate = complaintDate;
+	}
+
+	public void setComplaintDescription(String complaintDescription) {
+		this.complaintDescription = complaintDescription;
 	}
 
 	public void setComplaintReply(String complaintReply) {
 		this.complaintReply = complaintReply;
 	}
 
-	public boolean isComplaintStatus() {
-		return complaintStatus;
+	public void setReplyDate(String replyDate) {
+		this.replyDate = replyDate;
 	}
 
-	public void setComplaintStatus(boolean complaintStatus) {
+	public void setComplaintStatus(String complaintStatus) {
 		this.complaintStatus = complaintStatus;
 	}
+
+	public void setLoginVO(LoginVO loginVO) {
+		this.loginVO = loginVO;
+	}
+
+	
 
 
 }

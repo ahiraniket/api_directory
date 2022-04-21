@@ -9,5 +9,5 @@ public interface ManageFeedbacksDAO {
 	
 	public List viewFeedbacks();
 	
-	public void deleteFeedback(ManageFeedbacksVO manageFeedbacksVO);
+
 }
