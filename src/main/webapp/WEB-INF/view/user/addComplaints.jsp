@@ -112,7 +112,6 @@
 																class="mdi mdi-clock mr-1"></i>${i.replyDate}</small>
 														</h6>
 														<p>${i.complaintReply}</p>
-
 													</div>
 												</div>
 											</c:if>
