@@ -73,5 +73,11 @@ public class LoginController {
 
 		return new ModelAndView("login");
 	}
+	
+	@RequestMapping(value = "/user/aboutUs", method = RequestMethod.GET)
+	public ModelAndView loadAboutUs() {
+
+		return new ModelAndView("user/aboutUs");
+	}
 
 }
