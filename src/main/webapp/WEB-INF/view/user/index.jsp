@@ -45,43 +45,28 @@
 			<div class="main-panel">
 				<div class="content-wrapper">
 					<div class="row">
-						<div class="col-md-12 grid-margin grid-margin-md-0">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-6">
-											<img class="rounded mw-100" alt=""
-												src="<%=request.getContextPath()%>/userResources/image/about.jpg">
-										</div>
-										<div class="col-6">
-											<h3>About Project Name</h3>
-											<p class="text-justify text-muted" style="line-height: 1.7;">When
-												I first got into the online advertising business, I was
-												looking for the magical combination that would put my
-												website into the top search engine rankings When I first got
-												into the online advertising business, I was looking for the
-												magical combination that would put my website into the top
-												search engine rankings When I first got into the online
-												advertising business, I was looking for the magical
-												combination that would put my website into the top search
-												engine rankings</p>
-											<p class="text-justify text-muted" style="line-height: 1.7;">When
-												I first got into the online advertising business, I was
-												looking for the magical combination that would put my
-												website into the top search engine rankings When I first got
-												into the online advertising business, I was looking for the
-												magical combination that would put my website into the top
-												search engine rankings When I first got into the online
-												advertising business, I was looking for the magical
-												combination that would put my website into the top search
-												engine rankings</p>
-										</div>
+						<div class="container">
+							<div class="col-md-12">
+								<br><br>
+									<p style="font-size:3.0rem" class=""> API Development for Everyone</p><hr style="color:#008000">
+									
+									
+									<div class="hero-img" style="text-align:right;">
+										<img style="height:450px; width:500px" src="<%=request.getContextPath()%>/userResources/image/hero-img.svg">
 									</div>
-								</div>
+									
+									<p style="font-size:1.2rem; line-height: 1.9; class="text-justify text-muted">Simplify API development for users, teams, and
+										enterprises with APID open source. Find out how APID can help you design and
+										document your APIs at scale. </p>
+									<br><br>	
+									<a class="btn btn-outline-success" href="viewCategories">Explore APID</a>&emsp;
+									<a class="btn btn-outline-success" href="aboutUs">Learn More</a>
 							</div>
 						</div>
 					</div>
 				</div>
+
+
 				<!-- content-wrapper ends -->
 				<!-- partial:partials/_footer.html -->
 				<jsp:include page="footer.jsp"></jsp:include>

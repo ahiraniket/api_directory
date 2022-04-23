@@ -20,7 +20,7 @@
 								class="menu-title">Categories</span>
 						</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="#"> <i
+						<li class="nav-item"><a class="nav-link" href="aboutUs"> <i
 								class="mdi mdi-airplay menu-icon"></i> <span class="menu-title">About
 									Us</span>
 						</a></li>
@@ -34,13 +34,8 @@
 								<i class="mdi mdi-thumb-up menu-icon"></i> <span
 								class="menu-title">Give FeedBack</span>
 						</a></li>
-						
-						
-
-
 					</ul>
 				</div>
 			</nav>
-
 </body>
 </html>
