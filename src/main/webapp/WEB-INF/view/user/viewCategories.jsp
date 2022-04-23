@@ -51,13 +51,12 @@
 
 							<c:choose>
 								<c:when test="${j.count mod 2 == 0}">
-									<div class="col-md-6 col-lg-3 grid-margin stretch-card">
+									<div class="col-md-6 col-lg-3 grid-margin stretch-card" style="cursor: pointer;" onclick="window.location='viewApiCategory?categoryId=${i.categoryId}'">
 										<div
 											class="card bg-gradient-danger text-white text-center card-shadow-primary">
 											<div class="card-body">
 												<h3 class="mb-0">
-													<a href="viewApiCategory?categoryId=${i.categoryId}"
-														style="color: white">${i.categoryName}</a>
+													<label style="color: white">${i.categoryName}</label>
 												</h3>
 												<br> <br>
 												<h6 class="font-weight-normal">${i.categoryDescription}</h6>
@@ -66,12 +65,12 @@
 									</div>
 								</c:when>
 								<c:otherwise>
-									<div class="col-md-6 col-lg-3 grid-margin stretch-card">
+									<div class="col-md-6 col-lg-3 grid-margin stretch-card" style="cursor: pointer;" onclick="window.location='viewApiCategory?categoryId=${i.categoryId}'">
 										<div
 											class="card bg-gradient-primary	 text-white text-center card-shadow-primary">
 											<div class="card-body" >
 												<h3 class="mb-0">
-													<a href="viewApiCategory?categoryId=${i.categoryId}" style="color: white">${i.categoryName}</a>
+													<label style="color: white">${i.categoryName}</label>
 												</h3>
 												<br> <br>
 												<h6 class="font-weight-normal">${i.categoryDescription}</h6>
