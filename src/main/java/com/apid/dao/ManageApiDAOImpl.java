@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.apid.model.ManageApiVO;
 
 @Repository
-public class ManageApiDAOImpl implements ManageApiDAO{
+public class ManageApiDAOImpl implements ManageApiDAO {
 
 	@Autowired
 	SessionFactory sessionFactory;
@@ -24,18 +24,18 @@ public class ManageApiDAOImpl implements ManageApiDAO{
 	@Override
 	public List viewApi() {
 		Session session = this.sessionFactory.openSession();
-		Query q= session.createQuery("from ManageApiVO WHERE api_status=true");
-		List viewApiList=q.list();
+		Query q = session.createQuery("from ManageApiVO WHERE api_status=true");
+		List viewApiList = q.list();
 		return viewApiList;
 	}
 
 	@Override
 	public List editApi(ManageApiVO manageApiVO) {
 		Session session = this.sessionFactory.openSession();
-		Query q= session.createQuery("from ManageApiVO where apiId='"+manageApiVO.getApiId()+"' ");
-		List editApiList=q.list();
+		Query q = session.createQuery("from ManageApiVO where apiId='" + manageApiVO.getApiId() + "' ");
+		List editApiList = q.list();
 		return editApiList;
-		
+
 	}
 
 	@Override
@@ -43,7 +43,20 @@ public class ManageApiDAOImpl implements ManageApiDAO{
 		Session session = this.sessionFactory.getCurrentSession();
 		session.delete(manageApiVO);
 	}
+
+	@Override
+	public List apiResponseList(ManageApiVO manageApiVO) {
+		Session session = this.sessionFactory.openSession();
+		System.out.println("FROM ManageApiVO WHERE category_id = '"
+				+ manageApiVO.getManageCategoryVO().getCategoryId() + "' AND api_name = '"
+				+ manageApiVO.getApiName() + "' ");
+		Query q = session.createQuery("FROM ManageApiVO WHERE category_id = '"
+				+ manageApiVO.getManageCategoryVO().getCategoryId() + "' AND api_name = '"
+				+ manageApiVO.getApiName() + "' ");
+		List apiResponseList = q.list();
 	
-	
-	
+		System.out.println(apiResponseList);
+		return apiResponseList;
+	}
+
 }

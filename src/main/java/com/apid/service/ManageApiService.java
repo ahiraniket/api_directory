@@ -12,6 +12,8 @@ public interface ManageApiService {
 	
 	public List editApi(ManageApiVO manageApiVO);
 	
+	public List apiResponseList(ManageApiVO manageApiVO);
+	
 	public void deleteApi(ManageApiVO manageApiVO);
 	
 }

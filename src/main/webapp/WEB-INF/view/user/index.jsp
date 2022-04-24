@@ -48,7 +48,7 @@
 						<div class="container">
 							<div class="col-md-12">
 								<br><br>
-									<p style="font-size:3.0rem" class=""> API Development for Everyone</p><hr style="color:#008000">
+									<p style="font-size:3.0rem" class=""> APIs for Everyone</p><hr style="color:#008000">
 									
 									
 									<div class="hero-img" style="text-align:right;">

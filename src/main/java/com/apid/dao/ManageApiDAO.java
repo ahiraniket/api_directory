@@ -14,4 +14,7 @@ public interface ManageApiDAO {
 	 
 	public void deleteApi(ManageApiVO manageApiVO);
 	
+	public List apiResponseList(ManageApiVO manageApiVO);
+
+	
 }
