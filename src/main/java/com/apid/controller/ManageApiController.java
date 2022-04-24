@@ -1,16 +1,21 @@
 package com.apid.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 import java.util.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.apid.model.ManageApiVO;
+import com.apid.model.ManageCategoryVO;
 import com.apid.service.ManageCategoryService;
 import com.apid.service.ManageApiService;
 
@@ -70,4 +75,20 @@ public class ManageApiController {
 				.addObject("viewCategoryList", viewCategoryList);
 	}
 
+	@GetMapping(value = "user/getAPIDetails")
+	public ResponseEntity getAPIDetails(@RequestParam("categoryId") int categoryId, @RequestParam String apiName) {
+		
+		ManageCategoryVO manageCategoryVO= new ManageCategoryVO();
+		manageCategoryVO.setCategoryId(categoryId);
+		
+		ManageApiVO manageApiVO= new ManageApiVO();
+		manageApiVO.setManageCategoryVO(manageCategoryVO);
+		manageApiVO.setApiName(apiName);
+		
+		List apiResponseList= this.manageApiService.apiResponseList(manageApiVO);
+		
+		return new ResponseEntity(apiResponseList,HttpStatus.OK);
+	}
+	
+	
 }

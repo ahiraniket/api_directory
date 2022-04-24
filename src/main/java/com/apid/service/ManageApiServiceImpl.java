@@ -39,4 +39,10 @@ public class ManageApiServiceImpl implements ManageApiService {
 		manageApiDAO.deleteApi(manageApiVO);
 	}
 
+	@Override
+	public List apiResponseList(ManageApiVO manageApiVO) {
+		List apiResponseList= manageApiDAO.apiResponseList(manageApiVO);
+		return apiResponseList;
+	}
+
 }
