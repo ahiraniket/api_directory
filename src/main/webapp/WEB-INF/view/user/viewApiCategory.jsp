@@ -90,15 +90,15 @@
 															varStatus="l">
 
 															<div class="card">
-																<div class="card-header" role="tab"
+																<%-- <div class="card-header" role="tab"
 																	id="heading-${l.count}">
 																	<h6 class="mb-0">
 																		<a class="collapsed" data-toggle="collapse"
 																			href="#collapse-${l.count}" aria-expanded="false"
-																			aria-controls="collapse-${l.count}"> I can’t sign
+																			aria-controls="collapse-${l.count}"> I canât sign
 																			in to my account </a>
 																	</h6>
-																</div>
+																</div> --%>
 																<div id="collapse-${l.count}" class="collapse"
 																	role="tabpanel" aria-labelledby="heading-${l.count}"
 																	data-parent="#accordion-6">
