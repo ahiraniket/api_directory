@@ -12,10 +12,10 @@
 		</a>
 			<div class="collapse" id="ui-basic">
 				<ul class="nav flex-column sub-menu">
-					<li class="nav-item"><a class="nav-link"
-						href="addCategory">Add Category</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="viewCategory">View Category</a></li>
+					<li class="nav-item"><a class="nav-link" href="addCategory">Add
+							Category</a></li>
+					<li class="nav-item"><a class="nav-link" href="viewCategory">View
+							Category</a></li>
 				</ul>
 			</div></li>
 
@@ -35,9 +35,14 @@
 				</ul>
 			</div></li>
 
-		<li class="nav-item"><a href="viewComplaints"
-			class="nav-link"> <i class="mdi mdi-headset menu-icon"></i> <span
-				class="menu-title">Manage Complaints</span>
+		<li class="nav-item"><a href="viewContributions" class="nav-link">
+				<i class="mdi mdi-buffer menu-icon"></i> <span
+				class="menu-title">Manage Contributions</span>
+		</a></li>
+
+		<li class="nav-item"><a href="viewComplaints" class="nav-link">
+				<i class="mdi mdi-headset menu-icon"></i> <span class="menu-title">Manage
+					Complaints</span>
 		</a></li>
 		<li class="nav-item"><a class="nav-link" href="viewFeedbacks">
 				<i class="mdi mdi-thumb-up menu-icon"></i> <span class="menu-title">Manage
