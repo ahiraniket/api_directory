@@ -29,7 +29,7 @@
 <link rel="shortcut icon"
 	href="<%=request.getContextPath()%>/userResources/image/favicon.png" />
 </head>
-<body>
+<body onload="getAPIDetails('${apiName}','${category.categoryId}')">
 	<div class="container-scroller">
 		<div class="horizontal-menu">
 			<!-- ------------Header------------- -->
@@ -74,55 +74,15 @@
 												</ul>
 											</div>
 
+
 											<div class="col-8">
 												<div class="tab-content tab-content-vertical"
 													id="v-pills-tabContent">
-													<div class="tab-pane fade" id="v-pills-home"
+													<div class="tab-pane fade active show" id="v-pills-home"
 														role="tabpanel" aria-labelledby="v-pills-home-tab">
-
-
 
 														<div class="accordion accordion-multi-colored"
 															id="accordion-6" role="tablist"></div>
-
-
-														<c:forEach items="${apiResponseList}" var="k"
-															varStatus="l">
-
-															<div class="card">
-																<%-- <div class="card-header" role="tab"
-																	id="heading-${l.count}">
-																	<h6 class="mb-0">
-																		<a class="collapsed" data-toggle="collapse"
-																			href="#collapse-${l.count}" aria-expanded="false"
-																			aria-controls="collapse-${l.count}"> I canât sign
-																			in to my account </a>
-																	</h6>
-																</div> --%>
-																<div id="collapse-${l.count}" class="collapse"
-																	role="tabpanel" aria-labelledby="heading-${l.count}"
-																	data-parent="#accordion-6">
-																	<div class="card-body">
-																		If while signing in to your account you see an error
-																		message, you can do the following
-																		<ol class="pl-3 mt-4">
-																			<li>Check your network connection and try again</li>
-																			<li>Make sure your account credentials are
-																				correct while signing in</li>
-																			<li>Check whether your account is accessible in
-																				your region</li>
-																		</ol>
-																		<br>
-																		<p class="text-danger">
-																			<i class="mdi mdi-alert-octagon mr-2"></i>If the
-																			problem persists, you can contact our support.
-																		</p>
-																	</div>
-																</div>
-															</div>
-
-
-														</c:forEach>
 
 													</div>
 												</div>
@@ -195,25 +155,19 @@
 						for (var i = 0; i < jsn.length; i++) {
 
 							data = data + '<div class="card">';
-							data = data
-									+ '			<div class="card-header" role="tab" id="heading-'+i+'">';
-							data = data + '			<h6 class="mb-0">';
-							data = data
-									+ '				<a class="collapsed" data-toggle="collapse"';
-							data = data + '					href="#collapse-'+i+'" aria-expanded="false"';
-							data = data + '					aria-controls="collapse-'+i+'"> '
-									+ jsn[i].apiRequestMethodType + '</a>';
-							data = data + '			</h6>';
-							data = data + '		</div>';
-							data = data
-									+ '		<div id="collapse-'+i+'" class="collapse" role="tabpanel"';
+							data = data + '<div class="card-header" role="tab" id="heading-'+i+'">';
+							data = data + '<h6 class="mb-0">';
+							data = data + '<a class="collapsed" data-toggle="collapse"';
+							data = data + 'href="#collapse-'+i+'" aria-expanded="false"';
+							data = data + 'aria-controls="collapse-'+i+'"> ' + (i+1) + '. ' + jsn[i].apiRequestMethodType + '</a>';
+							data = data + '</h6>';
+							data = data + '</div>';
+							data = data + '		<div id="collapse-'+i+'" class="collapse" role="tabpanel"';
 							data = data + '			aria-labelledby="heading-'+i+'" data-parent="#accordion-6">';
-							data = data + '			<div class="card-body">';
-							data = data
-									+ '				message, you can do the following';
+							data = data + '			<div class="card-body"> ' + jsn[i].apiDescription;
 							data = data + '				<ol class="pl-3 mt-4">';
 							data = data
-									+ '					<li>Check your network connection and try again</li>';
+									+ '					<li><b>End Point :</b> '+jsn[i].apiEndpoint+' </li>';
 							data = data
 									+ '					<li>Make sure your account credentials are correct';
 							data = data + '						while signing in</li>';
@@ -232,7 +186,7 @@
 							data = data + '		</div>';
 							data = data + '	</div>';
 						}
-
+						
 						$('#accordion-6').html(data);
 
 					}
