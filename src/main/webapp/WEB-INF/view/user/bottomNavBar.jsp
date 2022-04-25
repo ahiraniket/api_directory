@@ -30,15 +30,15 @@
 								class="menu-title">Get Help</span>
 						</a></li>
 
-					<!-- 	<li class="nav-item"><a class="nav-link" href="myApi">
-								<i class="mdi mdi-thumb-up menu-icon"></i> <span
+					 	<li class="nav-item"><a class="nav-link" href="myApi">
+								<i class="mdi mdi-json menu-icon"></i> <span
 								class="menu-title">My APIs</span>
-						</a></li> -->
+						</a></li>
 						
 						<li class="nav-item"><a class="nav-link" href="addFeedback">
 								<i class="mdi mdi-thumb-up menu-icon"></i> <span
 								class="menu-title">Give FeedBack</span>
-						</a></li>
+						</a></li> 
 					</ul>
 				</div>
 			</nav>
