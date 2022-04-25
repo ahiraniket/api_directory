@@ -60,12 +60,9 @@ public class ManageCategoryController {
 		manageApiVO.setManageCategoryVO(categoryVO);
 		manageApiVO.setApiName(viewApiCategoryList.get(0).getApiName());
 
-		List apiResponseList = this.manageApiService.apiResponseList(manageApiVO);
-
-		System.out.println(apiResponseList.size());
-
 		return new ModelAndView("user/viewApiCategory", "viewApiCategoryList", viewApiCategoryList)
-				.addObject("category", categoryList.get(0)).addObject("apiResponseList", apiResponseList);
+				.addObject("category", categoryList.get(0))
+				.addObject("apiName", viewApiCategoryList.get(0).getApiName());
 	}
 
 	@GetMapping(value = "admin/deleteCategory")
