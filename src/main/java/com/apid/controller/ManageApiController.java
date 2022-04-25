@@ -1,5 +1,6 @@
 package com.apid.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import com.apid.model.ManageApiVO;
 import com.apid.model.ManageCategoryVO;
 import com.apid.service.ManageApiService;
 import com.apid.service.ManageCategoryService;
+import com.apid.utils.Basemethods;
 
 @Controller
 public class ManageApiController {
@@ -24,6 +26,9 @@ public class ManageApiController {
 
 	@Autowired
 	ManageCategoryService manageApiCategoryService;
+	
+	@Autowired
+	Basemethods basemethods;
 
 	@GetMapping(value = "admin/addApi")
 	public ModelAndView addApi() {
@@ -87,5 +92,14 @@ public class ManageApiController {
 		return new ResponseEntity(apiResponseList,HttpStatus.OK);
 	}
 	
+	
+	
+	@GetMapping(value = "user/executeAPI")
+	public ModelAndView executeAPI(@RequestParam("url") String url) throws IOException {
+		
+		String jsonData=this.basemethods.doGetRequest(url);
+		
+		return new ModelAndView("user/executeAPI","jsonData",jsonData);
+	}
 	
 }

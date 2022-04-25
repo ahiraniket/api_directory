@@ -114,7 +114,7 @@
 													
 													 <small class="mr-2 text-muted float-right lead">
 														 <c:forEach  begin="1" end="${i.feedbackRating}">
-															<i class="mdi mdi-star mr-1"></i>
+															<i class="mdi mdi-star mr-1" ></i>
 														</c:forEach>
 													</small>
 												</h6>

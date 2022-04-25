@@ -166,22 +166,15 @@
 							data = data + '			aria-labelledby="heading-'+i+'" data-parent="#accordion-6">';
 							data = data + '			<div class="card-body"> ' + jsn[i].apiDescription;
 							data = data + '				<ol class="pl-3 mt-4">';
-							data = data
-									+ '					<li><b>End Point :</b> '+jsn[i].apiEndpoint+' </li>';
-							data = data
-									+ '					<li>Make sure your account credentials are correct';
-							data = data + '						while signing in</li>';
-							data = data
-									+ '					<li>Check whether your account is accessible in';
-							data = data + '						your region</li>';
+							data = data + '					<li><b>Type:</b> '+jsn[i].apiType+' </li>';
+							data = data + '					<li><b>Response Type :</b> '+jsn[i].apiResponseType+' </li>';
+							data = data + '					<li><b>End Point :</b> '+jsn[i].apiEndpoint+' </li>';
+							data = data + '					<li><b>Sample Request:</b> '+jsn[i].apiSampleRequest+' </li>';
+							data = data + '					<li><b>Sample Response :</b> '+jsn[i].apiSampleResponse+' </li>';
+							data = data + '					<br>';
+							data = data + '					<li><a class="text-white" href="executeAPI?url='+jsn[i].apiEndpoint+'"><i class="mdi mdi-play lead text-white ml-3"></i> Execute</a></li>';
+							
 							data = data + '				</ol>';
-							data = data + '				<br>';
-							data = data + '				<p class="text-danger">';
-							data = data
-									+ '					<i class="mdi mdi-alert-octagon mr-2"></i>If the';
-							data = data
-									+ '					problem persists, you can contact our support.';
-							data = data + '				</p>';
 							data = data + '			</div>';
 							data = data + '		</div>';
 							data = data + '	</div>';
