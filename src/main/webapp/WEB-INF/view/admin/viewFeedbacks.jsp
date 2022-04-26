@@ -82,7 +82,7 @@
 														<td class="col-6">${i.feedbackDescription}</td>
 														<td><small class="mr-2 text-muted lead">
 																<c:forEach begin="1" end="${i.feedbackRating}">
-																	<i class="mdi mdi-star mr-1"></i>
+																	<i class="mdi mdi-star mr-1" style="color:#FFD700"></i>
 																</c:forEach>
 														</small></td>
 													</tr>
