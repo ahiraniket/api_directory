@@ -88,7 +88,7 @@
 														<td>${i.apiRequestMethodType}</td>
 														<td>${i.apiResponseType}</td>
 														<td><c:if test="${i.contributionStatus eq 'Pending'}">
-																<p style="color: yellow">${i.contributionStatus}</p>
+																<p style="color: blue">${i.contributionStatus}</p>
 
 															</c:if> <c:if test="${i.contributionStatus eq 'Rejected'}">
 																<p style="color: red">${i.contributionStatus}</p>

@@ -69,7 +69,7 @@
 															onclick="getAPIDetails('${i.apiName}','${i.manageCategoryVO.categoryId}')"
 															aria-controls="v-pills-home" aria-selected="false">
 
-																${j.count}. ${i.apiName } </a></li>
+																${j.count}. ${i.apiName} </a></li>
 													</c:forEach>
 												</ul>
 											</div>
@@ -173,7 +173,8 @@
 							data = data + '					<li><b>Sample Response :</b> '+jsn[i].apiSampleResponse+' </li>';
 							data = data + '					<br>';
 							data = data + '					<li><a class="text-white" href="executeAPI?url='+jsn[i].apiEndpoint+'"><i class="mdi mdi-play lead text-white ml-3"></i> Execute</a></li>';
-							
+							data = data + '					<br>';
+							/* data = data + '					<button onclick="window.location=addToFavorites?apiId='+jsn[i].apiId+'&categoryId='+jsn[i].manageCategoryVO.categoryId+'" class="btn btn-light">Add to favorites</button>'; */
 							data = data + '				</ol>';
 							data = data + '			</div>';
 							data = data + '		</div>';
@@ -192,8 +193,8 @@
 			xhttp.send();
 		}
 	</script>
-
-	<!-- End custom js for this page-->
+	
+		<!-- End custom js for this page-->
 </body>
 
 </html>
