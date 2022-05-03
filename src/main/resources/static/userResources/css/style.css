@@ -11073,6 +11073,23 @@ fieldset:disabled .wizard > .actions a,
   color: #fff;
   background-color: #4d7cff;
   border-color: #4d7cff;
+  padding:10px 20px
+}
+
+.rm-btn {
+	color: #fff;
+  	background-color: #4d7cff;
+  	border-color: #4d7cff;
+  	padding:10px 20px;
+  	text-decoration: none;
+  	border-radius:3px;
+}
+
+.rm-btn:hover {
+	color: #fff;
+  	background-color: #2760ff;
+  	border-color: #1a56ff;
+  	text-decoration: none;
 }
 
 .btn-info:hover {
@@ -23308,10 +23325,22 @@ dl li {
   background: #282f3a;
 }
 
+.opblock.opblock-get {
+	background: rgba(97,175,254,.1);
+    border-color: #61affe;
+}
+
+.opblock {
+	border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 19%);
+    margin: 0 0 15px;
+}
+
 .tab-content {
   border: 1px solid #f3f3f3;
   border-top: 0;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   text-align: justify;
 }
 

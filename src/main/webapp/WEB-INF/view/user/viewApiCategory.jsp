@@ -75,14 +75,15 @@
 											</div>
 
 
-											<div class="col-8">
+											<div class="col-9">
 												<div class="tab-content tab-content-vertical"
 													id="v-pills-tabContent">
+
 													<div class="tab-pane fade active show" id="v-pills-home"
 														role="tabpanel" aria-labelledby="v-pills-home-tab">
 
-														<div class="accordion accordion-multi-colored"
-															id="accordion-6" role="tablist"></div>
+														<div class="ud-accordion" id="accordion-101"
+															role="tablist"></div>
 
 													</div>
 												</div>
@@ -137,7 +138,7 @@
 	<script type="text/javascript">
 		function getAPIDetails(apiName, categoryId) {
 
-			$('#accordion-6').html();
+			$('#accordion-101').html();
 
 			const
 			xhttp = new XMLHttpRequest();
@@ -154,34 +155,90 @@
 
 						for (var i = 0; i < jsn.length; i++) {
 
-							data = data + '<div class="card">';
-							data = data + '<div class="card-header" role="tab" id="heading-'+i+'">';
-							data = data + '<h6 class="mb-0">';
-							data = data + '<a class="collapsed" data-toggle="collapse"';
-							data = data + 'href="#collapse-'+i+'" aria-expanded="false"';
-							data = data + 'aria-controls="collapse-'+i+'"> ' + (i+1) + '. ' + jsn[i].apiRequestMethodType + '</a>';
-							data = data + '</h6>';
-							data = data + '</div>';
-							data = data + '		<div id="collapse-'+i+'" class="collapse" role="tabpanel"';
-							data = data + '			aria-labelledby="heading-'+i+'" data-parent="#accordion-6">';
-							data = data + '			<div class="card-body"> ' + jsn[i].apiDescription;
+							data = data + '<div>';
+							data = data + '	<div class="opblock opblock-get">';
+							data = data + '		<div style="padding:20px 15px">';
+							data = data
+									+ '			<a class="collapsed rm-btn" data-toggle="collapse" '; 
+							data = data + '				href="#collapse-'+i+'" aria-expanded="false"';
+							data = data + '				aria-controls="collapse-'+i+'"> '
+									+ (i + 1) + '. '
+									+ jsn[i].apiRequestMethodType + '</a>';
+							data = data
+									+ '			<span style="color:gray"> &ensp; / &nbsp;'
+									+ jsn[i].categoryName + '&nbsp;/&nbsp;'
+									+ jsn[i].apiName + '</span>';
+							data = data + '		</div>';
+							data = data
+									+ '		<div id="collapse-'+i+'" class="collapse" role="tabpanel"';
+							data = data + '			aria-labelledby="heading-'+i+'" data-parent="#accordion-101">';
+							data = data + '			<div class="card-body"> '
+									+ jsn[i].apiDescription;
 							data = data + '				<ol class="pl-3 mt-4">';
-							data = data + '					<li><b>Type:</b> '+jsn[i].apiType+' </li>';
-							data = data + '					<li><b>Response Type :</b> '+jsn[i].apiResponseType+' </li>';
-							data = data + '					<li><b>End Point :</b> '+jsn[i].apiEndpoint+' </li>';
-							data = data + '					<li><b>Sample Request:</b> '+jsn[i].apiSampleRequest+' </li>';
-							data = data + '					<li><b>Sample Response :</b> '+jsn[i].apiSampleResponse+' </li>';
+							data = data + '					<li><b>Type:</b> '
+									+ jsn[i].apiType + ' </li>';
+							data = data + '					<li><b>Response Type :</b> '
+									+ jsn[i].apiResponseType + ' </li>';
+							data = data + '					<li><b>End Point :</b> '
+									+ jsn[i].apiEndpoint + ' </li>';
+							data = data + '					<li><b>Sample Request:</b> '
+									+ jsn[i].apiSampleRequest + ' </li>';
+							data = data + '					<li><b>Sample Response :</b> '
+									+ jsn[i].apiSampleResponse + ' </li>';
 							data = data + '					<br>';
-							data = data + '					<li><a class="text-white" href="executeAPI?url='+jsn[i].apiEndpoint+'"><i class="mdi mdi-play lead text-white ml-3"></i> Execute</a></li>';
+							data = data
+									+ '					<li><a class="text-white" href="executeAPI?url='
+									+ jsn[i].apiEndpoint
+									+ '"><i class="mdi mdi-play lead text-white ml-3"></i> Execute</a></li>';
 							data = data + '					<br>';
-							/* data = data + '					<button onclick="window.location=addToFavorites?apiId='+jsn[i].apiId+'&categoryId='+jsn[i].manageCategoryVO.categoryId+'" class="btn btn-light">Add to favorites</button>'; */
 							data = data + '				</ol>';
 							data = data + '			</div>';
 							data = data + '		</div>';
 							data = data + '	</div>';
+							data = data + '</div>';
+
+							/* 							data = data + '<div class="card">';
+							 data = data
+							 + '<div class="card-header" role="tab" id="heading-'+i+'">';
+							 data = data + '<h6 class="mb-0">';
+							 data = data
+							 + '<a class="collapsed" data-toggle="collapse"';
+							data = data + 'href="#collapse-'+i+'" aria-expanded="false"';
+							data = data + 'aria-controls="collapse-'+i+'"> '
+							 + (i + 1) + '. '
+							 + jsn[i].apiRequestMethodType + '</a>';
+							 data = data + '</h6>';
+							 data = data + '</div>';
+							 data = data
+							 + '		<div id="collapse-'+i+'" class="collapse" role="tabpanel"';
+							data = data + '			aria-labelledby="heading-'+i+'" data-parent="#accordion-6">';
+							 data = data + '			<div class="card-body"> '
+							 + jsn[i].apiDescription;
+							 data = data + '				<ol class="pl-3 mt-4">';
+							 data = data + '					<li><b>Type:</b> '
+							 + jsn[i].apiType + ' </li>';
+							 data = data + '					<li><b>Response Type :</b> '
+							 + jsn[i].apiResponseType + ' </li>';
+							 data = data + '					<li><b>End Point :</b> '
+							 + jsn[i].apiEndpoint + ' </li>';
+							 data = data + '					<li><b>Sample Request:</b> '
+							 + jsn[i].apiSampleRequest + ' </li>';
+							 data = data + '					<li><b>Sample Response :</b> '
+							 + jsn[i].apiSampleResponse + ' </li>';
+							 data = data + '					<br>';
+							 data = data
+							 + '					<li><a class="text-white" href="executeAPI?url='
+							 + jsn[i].apiEndpoint
+							 + '"><i class="mdi mdi-play lead text-white ml-3"></i> Execute</a></li>';
+							 data = data + '					<br>';
+							 /* data = data + '					<button onclick="window.location=addToFavorites?apiId='+jsn[i].apiId+'&categoryId='+jsn[i].manageCategoryVO.categoryId+'" class="btn btn-light">Add to favorites</button>'; */
+							/* 	/* data = data + '				</ol>';
+								data = data + '			</div>';
+								data = data + '		</div>';
+								data = data + '	</div>'; */
 						}
-						
-						$('#accordion-6').html(data);
+
+						$('#accordion-101').html(data);
 
 					}
 				}
@@ -193,8 +250,8 @@
 			xhttp.send();
 		}
 	</script>
-	
-		<!-- End custom js for this page-->
+
+	<!-- End custom js for this page-->
 </body>
 
 </html>
