@@ -45,11 +45,11 @@ public class ForgotPasswordServiceImpl implements ForgotPasswordService {
 	
 	public void sendEmail(String url,String toEmail){
 		SimpleMailMessage message= new SimpleMailMessage();
-		message.setFrom("noreply.apid@gmail.com");
+		message.setFrom("APID");
 		message.setTo(toEmail);
-		message.setText("Click here to continue: "+url);
-		message.setSubject("Subject");
-		
+		message.setText("Click this link to reset your password: "+url);
+		message.setSubject("Reset Password");
+	
 		mailSender.send(message);
 		System.out.println("Message send..");
 		

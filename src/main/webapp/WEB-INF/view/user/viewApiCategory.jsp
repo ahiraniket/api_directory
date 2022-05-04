@@ -157,6 +157,7 @@
 
 							data = data + '<div>';
 							data = data + '	<div class="opblock opblock-get">';
+						
 							data = data + '		<div style="padding:20px 15px">';
 							data = data
 									+ '			<a class="collapsed rm-btn" data-toggle="collapse" '; 
@@ -165,33 +166,35 @@
 									+ (i + 1) + '. '
 									+ jsn[i].apiRequestMethodType + '</a>';
 							data = data
-									+ '			<span style="color:gray"> &ensp; / &nbsp;'
+									+ '			<span style="color:gray;display:inline"> &ensp; / &nbsp;'
 									+ jsn[i].manageCategoryVO.categoryName + '&nbsp;/&nbsp;'
 									+ jsn[i].apiName + '</span>';
+							data = data + ' &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<i style="cursor:pointer;" class="mdi mdi-arrow-down-drop-circle-outline" data-toggle="collapse" href="#collapse-'+i+'" aria-expanded="false" aria-controls="collapse-'+i+'"></i>';
+									 
 							data = data + '		</div>';
 							data = data
 									+ '		<div id="collapse-'+i+'" class="collapse" role="tabpanel"';
 							data = data + '			aria-labelledby="heading-'+i+'" data-parent="#accordion-101">';
 							data = data + '			<div class="card-body"> '
 									+ jsn[i].apiDescription;
-							data = data + '				<ol class="pl-3 mt-4">';
-							data = data + '					<li><b>Type:</b> '
+							data = data + '				<ul style="list-style-type:none;margin:0;padding:0">';
+							data = data + '					<li><b><i class="mdi mdi-play lead text-black ml-3"></i> Type:</b> '
 									+ jsn[i].apiType + ' </li>';
-							data = data + '					<li><b>Response Type :</b> '
+							data = data + '					<li><b> <i class="mdi mdi-play lead text-black ml-3"></i> Response Type :</b> '
 									+ jsn[i].apiResponseType + ' </li>';
-							data = data + '					<li><b>End Point :</b> '
-									+ jsn[i].apiEndpoint + ' </li>';
-							data = data + '					<li><b>Sample Request:</b> '
+							data = data + '					<li><b><i class="mdi mdi-play lead text-black ml-3"></i> End Point : <a href="executeAPI?url='+jsn[i].apiEndpoint+'"></b> '
+									+ jsn[i].apiEndpoint + '</a> </li>';
+							data = data + '					<li><b><i class="mdi mdi-play lead text-black ml-3"></i> Sample Request:</b> '
 									+ jsn[i].apiSampleRequest + ' </li>';
-							data = data + '					<li><b>Sample Response :</b> '
+							data = data + '					<li><b><i class="mdi mdi-play lead text-black ml-3"></i> Sample Response :</b> '
 									+ jsn[i].apiSampleResponse + ' </li>';
 							data = data + '					<br>';
 							data = data
-									+ '					<li><a class="text-white" href="executeAPI?url='
+									+ '					<li><a class="btn btn-danger text-blue" href="executeAPI?url='
 									+ jsn[i].apiEndpoint
-									+ '"><i class="mdi mdi-play lead text-white ml-3"></i> Execute</a></li>';
+									+ '"> Execute</a></li>';
 							data = data + '					<br>';
-							data = data + '				</ol>';
+							data = data + '				</ul>';
 							data = data + '			</div>';
 							data = data + '		</div>';
 							data = data + '	</div>';
