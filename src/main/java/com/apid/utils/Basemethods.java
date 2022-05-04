@@ -2,6 +2,9 @@ package com.apid.utils;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
@@ -13,9 +16,9 @@ import okhttp3.Response;
 @Component
 public class Basemethods {
 
-	
+   
 	OkHttpClient client = new OkHttpClient();
-
+	
 	public String doGetRequest(String url) throws IOException {
 		Request request = new Request.Builder().url(url).build();
 
@@ -27,6 +30,8 @@ public class Basemethods {
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return user.getUsername();
 	}
+	
+	
 	
 }
 
