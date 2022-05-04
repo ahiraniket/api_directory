@@ -32,7 +32,7 @@ public class RegisterVO {
 	private String lastName;
 
 	@Column(name = "contact")
-	private int contact;
+	private String contact;
 
 	@Column(name = "designation")
 	private String designation;
@@ -57,11 +57,11 @@ public class RegisterVO {
 		this.lastName = lastName;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 

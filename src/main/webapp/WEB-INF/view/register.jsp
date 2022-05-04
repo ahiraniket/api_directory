@@ -59,17 +59,17 @@
 										id="email" placeholder="Email" path="loginVO.username"/>
 								</div>
 								<div class="form-group">
-									<f:input type="number" class="form-control form-control-lg"
+									<f:input type="text" class="form-control form-control-lg"
 										id="contact" placeholder="Contact" path="contact"/>
 								</div>
 								<div class="form-group">
-									<f:select class="form-control form-control-lg"
+									<f:select class="form-control form-control-lg" 
 										id="exampleFormControlSelect2" path="designation">
 										<option selected disabled>Designation</option>
-										<option>Developer</option>
-										<option>Student</option>
-										<option>Freelancer</option>
-										<option>Professional</option>
+										<option style="color:black">Developer</option>
+										<option style="color:black">Student</option>
+										<option style="color:black">Freelancer</option>
+										<option style="color:black">Professional</option>
 									</f:select>
 								</div>
 								<div class="form-group">
