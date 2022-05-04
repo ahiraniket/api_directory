@@ -40,9 +40,12 @@
 			<artifactId>bootstrap-datepicker</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		
-		 
-		 <!-- Okhttp -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<!-- Okhttp -->
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>

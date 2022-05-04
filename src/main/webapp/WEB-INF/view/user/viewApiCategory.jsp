@@ -166,7 +166,7 @@
 									+ jsn[i].apiRequestMethodType + '</a>';
 							data = data
 									+ '			<span style="color:gray"> &ensp; / &nbsp;'
-									+ jsn[i].categoryName + '&nbsp;/&nbsp;'
+									+ jsn[i].manageCategoryVO.categoryName + '&nbsp;/&nbsp;'
 									+ jsn[i].apiName + '</span>';
 							data = data + '		</div>';
 							data = data

@@ -63,7 +63,7 @@
 								<div class="my-2 d-flex justify-content-between align-items-end"
 									style="margin-top: 0.5rem; display: flex;flex-direction: row-reverse;">
 
-									<a href="#" class="auth-link text-danger">Forgot password?</a>
+									<a href="forgotPassword" class="auth-link text-danger">Forgot password?</a>
 
 								</div>
 								<div class="text-center mt-4 font-weight-light">
